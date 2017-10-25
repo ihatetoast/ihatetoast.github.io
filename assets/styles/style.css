@@ -1,0 +1,121 @@
+html {
+  font-family: 'Roboto', sans-serif; }
+  html a {
+    text-decoration: none; }
+
+body {
+  background-color: #f4f4f4; }
+
+/**********************************************************/
+/*****************       iPHONE           *****************/
+/**********************************************************/
+/**********************************************************/
+/*****************    PORTFOLIO PAGE      *****************/
+/**********************************************************/
+.portfolioBody {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0; }
+
+/**********************************************************/
+/*****************HEADER OF PORTFOLIO PAGE*****************/
+/**********************************************************/
+header {
+  padding: 1em;
+  background-color: #0E103D; }
+
+.headerFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.indexNavLinks {
+  align-self: center;
+  margin: 1 1em; }
+  .indexNavLinks ul {
+    margin-right: 2em; }
+  .indexNavLinks li {
+    color: #782b94;
+    display: inline;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    line-height: 1;
+    margin-right: 0.5em;
+    padding: 1em;
+    background-color: none;
+    border: 2px solid #782b94; }
+    .indexNavLinks li:hover {
+      font-weight: bold;
+      color: #f4f4f4;
+      box-shadow: inset 0 0 0 2em #d9b829; }
+
+.smallLogo {
+  margin-top: 1em; }
+
+.portfolioTitle {
+  font-family: 'Flamenco','Vollkorn', serif;
+  font-size: 2em;
+  color: #fff;
+  margin: 0; }
+
+/**********************************************************/
+/*****************BODY OF PORTFOLIO PAGE*****************/
+/**********************************************************/
+.container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 0 2em; }
+
+.projectFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2em; }
+
+.imgCont {
+  text-align: center;
+  flex: 1 1 auto; }
+  .imgCont img {
+    width: 300px; }
+
+.projectDesc a {
+  color: #0E103D;
+  text-decoration: none; }
+  .projectDesc a:hover {
+    color: #000;
+    font-weight: bold;
+    text-shadow: 1px 2px 2px #ccc; }
+
+@media (min-width: 500px) {
+  .projectDesc {
+    margin: 0 5em; } }
+@media (min-width: 736px) {
+  .indexNavLinks {
+    margin-top: 0.2em;
+    align-self: flex-end; }
+
+  .smallLogo {
+    width: 100px; }
+
+  .portfolioTitle {
+    font-size: 4em; }
+
+  .container {
+    margin: 0 5em; }
+
+  .projectFlex {
+    justify-content: center; }
+
+  .projectDesc {
+    margin: 0 5em; } }
+@media (min-width: 1000px) {
+  .container {
+    margin: 0 10em; }
+
+  .projectFlex {
+    flex-direction: row; } }
+
+/*# sourceMappingURL=style.css.map */
