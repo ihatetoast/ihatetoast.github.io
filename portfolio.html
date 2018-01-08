@@ -5,7 +5,7 @@
 		<meta name=viewport” content="width=device-width">
 		<meta name="description" content="Katy Cassidy's UI, frontend, and fullstack portfolio as IHateToast.">
 		<meta name=“author" content=“Katy Cassidy | ihatetoast">
-		<title>Katy Cassidy | RWD</title>
+		<title>Katy Cassidy | Works</title>
 		<link href="https://fonts.googleapis.com/css?family=Asul|Chivo" rel="stylesheet">
 		<link rel="stylesheet" href="./assets/styles/reset.css">
 		<link rel="stylesheet" href="./assets/styles/style.css">
@@ -14,39 +14,86 @@
 	<script src="https://use.fontawesome.com/9ea2d86206.js"></script>
 
 	<body>
-		
+		<!-- 
+		*********************************************************
+		*********************************************************
+		HEADER: 
+		contains div of name and logo, nav with links
+		*********************************************************
+		*********************************************************
+ 		-->
+ 		<!-- todo: undo the inline img styling -->
 		<header>
 			<div class="content-header">
-
 				<div class="brand">
 					<div class="name">
-						<h1>Katy <div id="ihtlogo"><img  src="./assets/images/ihtLogo.png" alt="greyhound eating toast"></div>
-						 Cassidy</h1>
+						<h1>Katy <div id="ihtlogo"><img  src="./assets/images/ihtLogo.png" alt="greyhound eating toast">
+						</div> Cassidy</h1>
 					</div>
 				</div>
 
+
 				<nav>
 					<ul id="navLinks">
-						<li><a class="active" href="./index.html">about</a></li>
-						<li><a class="inactive" href="./portfolio.html">portfolio</a></li>
+						<li><a class="inactive" href="./index.html">about</a></li>
+						<li><a class="active" href="./portfolio.html">portfolio</a></li>
 						<li><a class="inactive" href="./contact.html">contact</a></li>
 					</ul>
 				</nav>
 
 			</div>
 		</header>
+		
  	
 		<section id="main">
 
 			<article class="aboutContent">
-				<h2>About Me</h2>
-				<hr>
-				<div class="imgWithText">
-					<img src="./assets/images/couch.svg" alt="svg illustration of a dog and a woman on a couch">
-					<p>Programming got its hooks into me when I taught 4th-grade math and used MicroWorlds to augment my lessons. It was the first time I understood that coding was creative, fun, and for anyone. As I teach Python to middle schoolers, I ensure my students see the creativity–logic connection. And to anyone who'll listen, I campaign to encourage coding as a habit and passtime, like reading, knitting, and jogging. </p>
-          <p>Everything I’ve learned and done for a living comes together with programming: linguistics, writing, math; and I can use creativity and logic to build apps that make people’s lives better.</p>
-			</div>
-			</article>
+						<h2>Portfolio</h2>
+						<hr>
+						<section class="projectHolder">
+
+							<div class="projectPic">
+								<img src="./assets/images/hangman.svg" alt="image from a hangman game">
+								<a href=" http://www.ihatetoast.com/hangman-game/">
+									<div class="projectTitleBar0"></div>
+									<div class="projectTitleBar1"><h4>Hangman</h4></div>
+								</a>
+							</div>
+              <div class="projectPic">
+                <img src="./assets/images/day49.png" alt="dance dance revolution pad">
+                <a href="http://ihatetoast-css-images.surge.sh/" target="_blank">
+                  <div class="projectTitleBar0"></div>
+                  <div class="projectTitleBar1"><h4>50 Pure CSS Images</h4>
+                  </div>
+                </a>
+              </div>
+              <div class="projectPic">
+                <img src="./assets/images/stan.jpg" alt="a woman kissing a greyhound">
+                <a href="https://ihatetoast-crittersitter.herokuapp.com/home" target="_blank">
+                  <div class="projectTitleBar0"></div>
+                  <div class="projectTitleBar1"><h4>Critter Sitter</h4></div>
+                </a>
+              </div>
+						
+
+							<div class="projectPic">
+								<img src="./assets/images/eggfoxfeathers.svg" alt="Foxes, eggs, and feathers in varying states of discomfort">
+								<a href="http://www.ihatetoast.com/eggfoxfeathers/" target="_blank">
+									<div class="projectTitleBar0"></div>
+									<div class="projectTitleBar1"><h4>Egg Feathers Fox</h4></div>
+								</a>
+              </div>
+
+							<div class="projectPic">
+								<img src="./assets/images/creepyman.svg" alt="a man in a blue hoodie">
+								<a href="http://ihatetoast-dodgy-harold.surge.sh/" target="_blank">
+									<div class="projectTitleBar0"></div>
+									<div class="projectTitleBar1"><h4>Dodgy Harold</h4></div>
+								</a>
+							</div>
+							
+						</section>
+					</article>
 
 			<aside>
 				<div class="title">
@@ -113,13 +160,13 @@
 								</div>
 							</div>
 						</a>
-						<a href="https://www.linkedin.com/in/cassidykaty/" target="_blank" class="socialMedia-holder linkedIn">
+						<a href="https://www.linkedin.com/in/cassidykaty/" class="socialMedia-holder linkedIn">
 							<div class="block">
 								<div class="socialMediaPlatform">
 									LinkedIn
 								</div>
 								<div class="socialMediaHandle">
-									<i class="fa fa-linkedin fa-lg linkedIn icons" id="linkedin" aria-hidden="true"></i>
+									<i class="fa fa-linkedin fa-lg linkedIn icons" target="_blank" id="linkedin" aria-hidden="true"></i>
 									<span>ihatetoast</span>
 								</div>
 							</div>
@@ -129,9 +176,21 @@
 					<div class="clear"></div>
 				</div>
 			</aside>
+
 		</section>
+
+
 		<footer>
 			<p>Katy Cassidy | ihatetoast </p>
 		</footer>
 	</body>
 </html>
+
+<!-- template: -->
+<!-- <div class="projectPic">
+    <img src="./assets/images/xxx" alt="ruth bader ginsburg">
+    <a href="#">
+      <div class="projectTitleBar0"></div>
+      <div class="projectTitleBar1"><h4>Notorious RBG Game</h4></div>
+    </a>
+  </div> -->

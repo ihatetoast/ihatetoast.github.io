@@ -1,140 +1,412 @@
 
-html{
-	font-family: 'Roboto', sans-serif;
-	a {
-		text-decoration: none;
+$lavender: rgb(151, 145, 159);
+$lilac: rgb(198, 177, 199);
+$eggplant: #652e67;
+$white: rgb(245, 248, 250);
+$active: rgb(191, 129, 157);
+
+//social media colours:
+$gitHub: rgb(120,120, 120 );
+$dribbble: rgb(234,76,137);
+$linkedIn: rgb(0, 123, 181);
+$twitter: rgb(0, 172, 237);
+$wordPress: rgb(33, 117, 155);
+$codePen: rgb(25, 25, 25);
+
+//tests
+$test: green;
+@mixin testDiv($w, $h){
+	width: $w;
+	height: $h;
+}
+//MIXINS
+@mixin socialMedia-container($color) {
+  .block {
+    .socialMediaPlatform, .socialMediaHandle {
+      background: $color;
+    }
+    .socialMediaHandle {
+      //effect of shadow
+      background: darken($color, 25%);
+    }
+  }
+  //on hovering, bottom becomes the color and top gets lighter
+  &:hover .block {
+    .socialMediaHandle {
+      background: $color;
+    }
+    .socialMediaPlatform {
+      //effect of hitting light from above
+      background: lighten($color, 25%);
+    }
+  }
+}
+
+
+* {
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+}
+
+body {
+	background-image: url("../images/paper/paper.png");
+	display: flex;
+	flex-direction: column;
+	font-family: 'Chivo', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	line-height: 1.5;
+}
+h1, h2, h3 {
+	font-family: 'Asul','Georgia', serif;
+}
+h4 {
+	color: $white;
+}
+a {
+	text-decoration: none;
+}
+p {
+	margin: 1em 0.5em;
+}
+hr {
+	border-color: $lilac;
+	margin: 1em 0 1.5em 0;
+}
+
+header {
+	background-color: $white;
+	border-bottom: 1px solid $lavender;
+}
+.content-header {
+	display: flex;
+	flex-direction: column;
+	@media screen and (min-width: 768px){
+		padding: 0 1em;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	@media screen and (min-width: 980px)  {
+		justify-content: space-around;
 	}
 }
 
-body{
-	background-color: #f4f4f4;
+.brand {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+
 }
-/**********************************************************/
-/*****************       iPHONE           *****************/
-/**********************************************************/
 
-/**********************************************************/
-/*****************    PORTFOLIO PAGE      *****************/
-/**********************************************************/
-// @media (max-width : 736px) {
-	.portfolioBody{
-		display:flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		margin: 0;
+.name {
+	background-color: $eggplant;
+	color: $white;
+	font-size: 2em;
+	letter-spacing: 0.1em;
+	padding: 0.75em;
+	flex-grow:1;
+	h1 {
+		text-align: center;
 	}
-	/**********************************************************/
-	/*****************HEADER OF PORTFOLIO PAGE*****************/
-	/**********************************************************/
-	header{
-		padding: 1em;
-		background-color: #0E103D;
-	}
+}
 
-	.headerFlex{
+nav {
+	justify-content: center;
+	@media screen and (min-width: 620px){
 		display: flex;
-		flex-direction: column;
 		align-items: center;
 	}
-	.indexNavLinks{
-		align-self: center;
-		margin: 1 1em;
-		ul{
-			margin-right:2em;
+}
+
+#navLinks {
+	display: flex;
+	li{ 
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	margin: 1em ;
+	flex-grow:1;
+		@media screen and (min-width: 620px){
+		padding: 0 0.5em;
 		}
-		li{
-			color: rgb(47%, 17%, 58%);
-			display: inline;
-			font-family: 'Roboto', sans-serif;
-			list-style: none;
-			line-height: 1;
-			margin-right: 0.5em;
-			padding: 1em;
-			background-color: none;
-			border: 2px solid rgb(47%, 17%, 58%);
-			&:hover{
-				font-weight: bold;
-				color: #f4f4f4;
-				box-shadow: inset 0 0 0 2em rgb(85%, 72%, 16%);
+	}
+}
+#ihtlogo {
+	box-sizing: content;
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	background-color: $white;
+	display: inline-block;
+	padding-top: 0.1em;
+	img {
+		width: 80%;
+		height: 80%;
+	}
+}
+
+.inactive {
+	color: $lilac;
+}
+.active {
+	color: $active;
+	font-weight: bold;
+}
+.inactive:hover {
+	color: $eggplant;
+	text-shadow: 0px 0px 1px rgb(227, 216, 227);
+}
+
+#main {
+	margin: 1em;
+		@media screen and (min-width: 980px)  {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex: 1 0 auto;
+	}
+}
+.cranky {
+  color: $eggplant;
+  font-weight: bold;
+}
+.aboutContent, aside {
+		margin-top: 2em;
+		box-shadow: inset 0px 0px 25px -2px $lavender;
+}
+.aboutContent {
+	background-color: $white;
+	padding: 1.5em;
+	display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+		h2 {
+		color: $eggplant;
+    font-size: 2em;
+    align-self: flex-start;
+		}
+	@media screen and (min-width: 980px)  {
+		flex: 0 0 50%;
+		margin-right: 2em;
+	}
+}
+.imgWithText {
+	img {
+			width: 100%;
+			@media screen and (min-width: 768px){
+				width: 45%;
+				float: left;
+				margin-right: 1em;
+			}
+			@media screen and (min-width: 980px){
+				width: 100%;
+			}
+	}
+}
+
+aside {
+	background-color: $white;
+	padding: 1.5em;
+	@media screen and (min-width: 980px)  {
+		flex: 0 0 18em;
+		
+	}
+}
+
+.iconRow {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		@media screen and (min-width: 768px){
+			justify-content: flex-start;
+		}
+		
+		li {
+			padding: 0 0.4em;
+			@media screen and (min-width: 980px){
+				padding: 0 0.5em;
 			}
 		}
 	}
-	.smallLogo {
-		margin-top: 1em;
-	}
+}
 
-	.portfolioTitle{
-		font-family: 'Flamenco','Vollkorn', serif;
-	    font-size: 2em;
-	    color: #fff;
-	    margin: 0;
+.title {
+	 h3 {
+		color: $eggplant;
+		font-size: 1.5em;
 	}
-
-
-	/**********************************************************/
-	/*****************BODY OF PORTFOLIO PAGE*****************/
-	/**********************************************************/
-	.container{
-		background-color: #fff;
-		display: flex;
-		flex-direction: column;
-		padding: 1em;
-		margin: 0 2em;
-	}
-	.projectFlex {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		margin-top: 2em;
-	}
-	.imgCont{
+	hr {
+		border-width: 1px;
 		text-align: center;
-		flex: 1 1 auto;
-		img{
-			width: 300px;
-		}
 	}
-	.projectDesc {
+}
 
-		a {
-		    color: #0E103D;
-		    text-decoration: none;
-		    &:hover{
-		    	color: #000;
-		    	font-weight: bold;
-		    	text-shadow: 1px 2px 2px #ccc;
-		    }
-		}
+.icons {
+	margin: 0em 0.25em;
+	float: left;
+}
 
+.socialMedia-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  align-items: center;
+	text-align: center;
+}
+.socialMedia-holder {
+	position: relative;
+	display: inline-block;
+	width: 9.5em;
+	height: 2.25em;
+	margin: 0.35em 0.1em;
+	//rotation controlled with perspective:
+	perspective: 500px;
+	.block {
+		position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1s;
+    transform: translateZ(-18px);
+    .socialMediaPlatform, .socialMediaHandle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      transition: background 1s;
+    }
+
+    .socialMediaPlatform {
+    	transform: rotateX(0deg) translateZ(18px);
+    }
+    .socialMediaHandle{
+    	 transform: rotateX(-90deg) translateZ(18px);
+    }
+	} 
+	&:hover .block {
+    transform: translateZ(-18px) rotateX(90deg);
+  }
+}
+
+
+//apply color mixin:
+.socialMedia-holder {
+  &.twitter {
+    @include socialMedia-container($twitter);
+  }
+  &.linkedIn {
+    @include socialMedia-container($linkedIn);
+  }
+  &.wordPress {
+    @include socialMedia-container($wordPress);
+  }
+  &.gitHub {
+    @include socialMedia-container($gitHub);
+  }
+  &.dribbble {
+    @include socialMedia-container($dribbble);
+  }
+  &.codePen {
+    @include socialMedia-container($codePen);
+  }
+}
+
+.content {
+	flex: 1 0 auto;
+}
+.clear {
+	clear: both;
+}
+
+footer {
+	background-color: $lilac;
+	color: #fff;
+	padding: 0.6em;
+	border-top: 4px solid $eggplant;
+}
+footer p {
+	font-size: 0.75em;
+	text-align: center;
+}
+
+label {
+	color: $lavender;
+	display: block;
+	margin: 0.75em 0 0.25em 0;
+}
+
+input, textarea {
+	width: 100%;
+	font-size: 1em;
+	padding: 0.5em;
+}
+
+#subBtn {
+	background-color: $eggplant;
+	color: $white;
+	font-size: 1em;
+	margin-top: 0.75em;
+  padding: 0.75em 1.5em;
+  border-width: 0;
+}
+#subBtn:hover {
+	background-color: $lilac;
+	color: $eggplant;
+}
+
+.projectHolder {
+	display:flex;
+	flex-direction: column;
+	@media screen and (min-width: 768px){
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
-@media (min-width: 500px) {
-	.projectDesc {
-		margin: 0 5em;
+	@media screen and (min-width: 980px){
+		flex-direction: column;
 	}
 }
-@media (min-width: 736px){
-	.indexNavLinks{
-		margin-top: 0.2em;
-		align-self: flex-end;
+.projectPic {
+	display: inline-block;
+	box-shadow: 2px 2px 15px 1px #ccc;
+	background-color: rgb(231, 243, 254);
+	position: relative;
+	margin: 1em 0.7em;
+	overflow: hidden;
+	img {
+		width: 100%;
 	}
-	.smallLogo {
-		width: 100px;
-	}
-	.portfolioTitle{
-		font-size: 4em;
-	}
-	.container{
-		margin: 0 5em;
-	}
-	.projectFlex {
-		
-		justify-content: center;
-	}
-	.projectDesc {
-		margin: 0 5em;
+	@media screen and (min-width: 768px){
+		flex-basis: 48%;
+		margin: 1em 0em;
 	}
 }
-@media (min-width: 1000px){
-	.container{margin: 0 10em;}
-	.projectFlex{flex-direction: row;}
+
+.projectTitleBar0 {
+	background-color: $eggplant;
+	opacity: 0.8;
+	position:absolute;
+	bottom: 5%;
+	width: 100%;
+	height: 3em;
+	z-index: 0;
 }
+.projectTitleBar1 {
+	position: absolute;
+	text-align: center;
+	font-size: 2em;
+	bottom: 5%;
+	width: 100%;
+	z-index: 1;
+
+}
+
