@@ -101,11 +101,13 @@ nav {
   text-shadow: 0px 0px 1px #e3d8e3; }
 
 #main {
-  margin: 1em; }
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
   @media screen and (min-width: 980px) {
     #main {
       display: flex;
-      justify-content: center;
       align-items: flex-start;
       flex: 1 0 auto; } }
 
@@ -125,24 +127,30 @@ nav {
   justify-content: flex-start;
   align-items: center; }
   .aboutContent h2 {
+    align-self: flex-start;
     color: #652e67;
     font-size: 2em;
-    align-self: flex-start; }
+    margin-bottom: 0.5em; }
   @media screen and (min-width: 980px) {
     .aboutContent {
-      flex: 0 0 50%;
-      margin-right: 2em; } }
+      flex: 0 0 50%; } }
 
-.imgWithText img {
-  width: 100%; }
-  @media screen and (min-width: 768px) {
-    .imgWithText img {
-      width: 45%;
-      float: left;
-      margin-right: 1em; } }
-  @media screen and (min-width: 980px) {
-    .imgWithText img {
-      width: 100%; } }
+.imgWithText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .imgWithText img {
+    width: 90%;
+    margin-bottom: 0.5em; }
+    @media screen and (min-width: 768px) {
+      .imgWithText img {
+        width: 45%;
+        float: left;
+        margin-right: 1em; } }
+    @media screen and (min-width: 980px) {
+      .imgWithText img {
+        align-self: center;
+        width: 90%; } }
 
 aside {
   background-color: #f5f8fa;
@@ -185,7 +193,7 @@ aside {
 .socialMedia-holder {
   position: relative;
   display: inline-block;
-  width: 9.5em;
+  width: 15em;
   height: 2.25em;
   margin: 0.35em 0.1em;
   perspective: 500px; }
@@ -315,12 +323,18 @@ input, textarea {
     .projectHolder {
       flex-direction: column; } }
 
+.projectFrame {
+  border: 1px solid green;
+  background-color: #c7c7c7;
+  display: flex;
+  flex-direction: column;
+  padding: 1em; }
+
 .projectPic {
   display: inline-block;
   box-shadow: 2px 2px 15px 1px #ccc;
   background-color: #e7f3fe;
   position: relative;
-  margin: 1em 0.7em;
   overflow: hidden; }
   .projectPic img {
     width: 100%; }
@@ -328,6 +342,14 @@ input, textarea {
     .projectPic {
       flex-basis: 48%;
       margin: 1em 0em; } }
+
+.projectDesc {
+  display: flex;
+  flex-direction: column; }
+
+.projectLinks ul {
+  display: flex;
+  justify-content: space-around; }
 
 .projectTitleBar0 {
   background-color: #652e67;

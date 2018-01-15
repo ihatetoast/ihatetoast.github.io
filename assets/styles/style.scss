@@ -4,6 +4,7 @@ $lilac: rgb(198, 177, 199);
 $eggplant: #652e67;
 $white: rgb(245, 248, 250);
 $active: rgb(191, 129, 157);
+$grey: rgb(199, 199, 199);
 
 //social media colours:
 $gitHub: rgb(120,120, 120 );
@@ -158,10 +159,12 @@ nav {
 }
 
 #main {
-	margin: 1em;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 		@media screen and (min-width: 980px)  {
 		display: flex;
-		justify-content: center;
 		align-items: flex-start;
 		flex: 1 0 auto;
 	}
@@ -182,25 +185,30 @@ nav {
   justify-content: flex-start;
   align-items: center;
 		h2 {
+    align-self: flex-start;
 		color: $eggplant;
     font-size: 2em;
-    align-self: flex-start;
+    margin-bottom: 0.5em;
 		}
 	@media screen and (min-width: 980px)  {
 		flex: 0 0 50%;
-		margin-right: 2em;
 	}
 }
 .imgWithText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 	img {
-			width: 100%;
+      width: 90%;
+      margin-bottom: 0.5em;
 			@media screen and (min-width: 768px){
 				width: 45%;
 				float: left;
 				margin-right: 1em;
 			}
 			@media screen and (min-width: 980px){
-				width: 100%;
+        align-self:center;
+				width: 90%;
 			}
 	}
 }
@@ -210,7 +218,6 @@ aside {
 	padding: 1.5em;
 	@media screen and (min-width: 980px)  {
 		flex: 0 0 18em;
-		
 	}
 }
 
@@ -258,7 +265,7 @@ aside {
 .socialMedia-holder {
 	position: relative;
 	display: inline-block;
-	width: 9.5em;
+	width: 15em;
 	height: 2.25em;
 	margin: 0.35em 0.1em;
 	//rotation controlled with perspective:
@@ -375,12 +382,19 @@ input, textarea {
 		flex-direction: column;
 	}
 }
+.projectFrame {
+  border: 1px solid $test;
+
+  background-color: $grey;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
 .projectPic {
 	display: inline-block;
 	box-shadow: 2px 2px 15px 1px #ccc;
 	background-color: rgb(231, 243, 254);
 	position: relative;
-	margin: 1em 0.7em;
 	overflow: hidden;
 	img {
 		width: 100%;
@@ -389,6 +403,14 @@ input, textarea {
 		flex-basis: 48%;
 		margin: 1em 0em;
 	}
+}
+.projectDesc {
+  display: flex;
+  flex-direction: column;
+}
+.projectLinks ul {
+  display: flex;
+  justify-content: space-around;
 }
 
 .projectTitleBar0 {
