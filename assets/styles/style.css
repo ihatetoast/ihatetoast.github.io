@@ -4,7 +4,8 @@
 body {
   background-image: url("../images/paper/paper.png");
   font-family: 'Chivo', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  align-items: center; }
 
 .site {
   display: flex;
@@ -36,6 +37,9 @@ hr {
 header {
   background-color: #f5f8fa;
   border-bottom: 1px solid #97919f; }
+
+header, footer {
+  width: 100%; }
 
 .content-header {
   display: flex;
@@ -112,12 +116,30 @@ nav {
 .main {
   display: flex;
   padding: 1em;
+  width: 80%;
   flex-direction: column; }
+  @media (min-width: 899px) {
+    .main {
+      align-items: flex-start;
+      flex-direction: row;
+      justify-content: space-between; } }
+
+aside, article {
+  background-color: #f5f8fa;
+  margin-bottom: 1em; }
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  padding: 1em; }
+  @media (min-width: 899px) {
+    .aboutContent {
+      flex-basis: 70%; } }
 
 .imgWithText {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  align-items: center; }
 
 .aboutImg {
   width: 80%; }
@@ -125,9 +147,6 @@ nav {
 .titleHeader {
   color: #652e67;
   font-size: 1.5em; }
-
-aside {
-  background-color: #f5f8fa; }
 
 .iconRow ul {
   display: flex;
@@ -142,9 +161,16 @@ aside {
       .iconRow ul li {
         padding: 0 0.5em; } }
 
-.socialMedia hr {
-  border-width: 1px;
-  text-align: center; }
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+  padding: 1em; }
+  @media (min-width: 899px) {
+    .socialMedia {
+      flex-basis: 25%; } }
+  .socialMedia hr {
+    border-width: 1px;
+    text-align: center; }
 
 .icons {
   margin: 0em 0.25em;
@@ -156,14 +182,22 @@ aside {
   justify-content: center;
   align-items: center;
   text-align: center; }
+  @media (min-width: 899px) {
+    .socialMedia-container {
+      flex-direction: column; } }
 
 .socialMedia-holder {
   position: relative;
   display: inline-block;
-  width: 10em;
+  width: 44%;
   height: 2.25em;
-  margin: 0.35em 0.1em;
+  margin-top: .30em;
+  margin-left: 3%;
+  margin-right: 3%;
   perspective: 500px; }
+  @media (min-width: 899px) {
+    .socialMedia-holder {
+      width: 80%; } }
   .socialMedia-holder .block {
     position: absolute;
     left: 0;

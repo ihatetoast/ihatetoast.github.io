@@ -58,7 +58,8 @@ $test: green;
 body {
 	background-image: url("../images/paper/paper.png");
 	font-family: 'Chivo', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-	line-height: 1.5;
+  line-height: 1.5;
+  align-items: center;
 }
 .site {
 	display: flex;
@@ -90,7 +91,10 @@ hr {
 // HEADER
 header {
 	background-color: $white;
-	border-bottom: 1px solid $lavender;
+  border-bottom: 1px solid $lavender;
+}
+header, footer {
+  width: 100%;
 }
 .content-header {
 	display: flex;
@@ -171,14 +175,34 @@ nav {
 
 .main {
 	display: flex;
-	padding: 1em;
-	flex-direction: column;
+  padding: 1em;
+  width: 80%;
+  flex-direction: column;
+  @media (min-width: 899px) {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
+
+
+aside, article {
+  background-color: $white;
+  margin-bottom: 1em;
+}
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  @media (min-width: 899px){
+    flex-basis: 70%;
+  }
+}
+
 .imgWithText{
 	display:flex;
 	flex-direction: column;
-	justify-content: center;
-
+	align-items: center;
 }
 .aboutImg {
 	width: 80%;
@@ -187,9 +211,7 @@ nav {
 	color: $eggplant;
 	font-size: 1.5em;
 }
-aside {
-	background-color: $white;
-}
+
 
 .iconRow {
 	ul {
@@ -209,6 +231,12 @@ aside {
 }
 
 .socialMedia {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  @media (min-width: 899px) {
+    flex-basis: 25%;
+  }
 	hr {
 		border-width: 1px;
 		text-align: center;
@@ -225,16 +253,24 @@ aside {
 	flex-wrap: wrap;
 	justify-content: center;
   align-items: center;
-	text-align: center;
+  text-align: center;
+  @media (min-width: 899px){
+    flex-direction: column;
+  }
 }
 .socialMedia-holder {
 	position: relative;
 	display: inline-block;
-	width: 10em;
+	width: 44%;
 	height: 2.25em;
-	margin: 0.35em 0.1em;
+  margin-top: .30em;
+  margin-left: 3%;
+  margin-right: 3%;
 	//rotation controlled with perspective:
-	perspective: 500px;
+  perspective: 500px;
+  @media (min-width: 899px){
+    width: 80%;
+  }
 	.block {
 		position: absolute;
     left: 0;
