@@ -54,7 +54,11 @@ header, footer {
 .brand {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  margin-left: 0%; }
+  @media (min-width: 899px) {
+    .brand {
+      margin-left: 10%; } }
 
 .name {
   background-color: #652e67;
@@ -68,10 +72,11 @@ header, footer {
 
 nav {
   display: flex;
-  justify-content: center; }
-  @media (min-width: 699px) {
+  justify-content: center;
+  margin-right: 0%; }
+  @media (min-width: 899px) {
     nav {
-      align-items: center; } }
+      margin-right: 8%; } }
 
 #navLinks {
   display: flex; }
@@ -136,10 +141,9 @@ aside, article {
     .aboutContent {
       flex-basis: 70%; } }
 
-.imgWithText {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+.bikeImg {
+  width: 80%;
+  margin: 1em auto; }
 
 .aboutImg {
   width: 80%; }
@@ -147,6 +151,11 @@ aside, article {
 .titleHeader {
   color: #652e67;
   font-size: 1.5em; }
+
+.imgWithText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
 
 .iconRow ul {
   display: flex;
