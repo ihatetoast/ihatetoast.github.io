@@ -20,6 +20,16 @@ $test: green;
 	height: $h;
 }
 //MIXINS
+@mixin sm-range {
+  @media (max-width: 599px) { @content; }
+}
+@mixin md-range {
+  @media (min-width: 600px) and (max-width: 899px) { @content; }
+}
+@mixin lg-up {
+  @media (min-width: 900px){ @content; }
+}
+
 @mixin socialMedia-container($color) {
   .block {
     .socialMediaPlatform, .socialMediaHandle {
@@ -41,21 +51,25 @@ $test: green;
     }
   }
 }
-
-
 * {
 	box-sizing: border-box;
-}
-html, body {
-	height: 100%;
 }
 
 body {
 	background-image: url("../images/paper/paper.png");
-	display: flex;
-	flex-direction: column;
 	font-family: 'Chivo', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 	line-height: 1.5;
+}
+.site {
+	display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.site-content {
+	flex: 1 0 auto;
+}
+.clear {
+	clear: both;
 }
 h1, h2, h3 {
 	font-family: 'Asul','Georgia', serif;
@@ -73,31 +87,26 @@ hr {
 	border-color: $lilac;
 	margin: 1em 0 1.5em 0;
 }
-
+// HEADER
 header {
 	background-color: $white;
 	border-bottom: 1px solid $lavender;
 }
 .content-header {
 	display: flex;
-	flex-direction: column;
-	@media screen and (min-width: 768px){
-		padding: 0 1em;
+  flex-direction: column;
+  @media (min-width: 699px){
+    padding: 0 1em;
 		flex-direction: row;
 		justify-content: space-between;
-	}
-	@media screen and (min-width: 980px)  {
-		justify-content: space-around;
-	}
+		align-items: flex-end;
+  }
 }
-
 .brand {
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
-
 }
-
 .name {
 	background-color: $eggplant;
 	color: $white;
@@ -109,11 +118,10 @@ header {
 		text-align: center;
 	}
 }
-
 nav {
+	display: flex;
 	justify-content: center;
-	@media screen and (min-width: 620px){
-		display: flex;
+	@media (min-width: 699px){
 		align-items: center;
 	}
 }
@@ -121,13 +129,14 @@ nav {
 #navLinks {
 	display: flex;
 	li{ 
-	display: flex;
-	justify-content: space-around;
-	text-align: center;
-	margin: 1em ;
-	flex-grow:1;
-		@media screen and (min-width: 620px){
-		padding: 0 0.5em;
+		display: flex;
+		justify-content: space-around;
+		text-align: center;
+		margin: 1em ;
+		flex-grow:1;
+		@media (min-width: 899px){
+			font-size: 1.2em;
+		  padding: 0 0.5em;
 		}
 	}
 }
@@ -144,10 +153,7 @@ nav {
 		height: 80%;
 	}
 }
-
-.inactive {
-	color: $lilac;
-}
+.inactive {color: $lilac;}
 .active {
 	color: $active;
 	font-weight: bold;
@@ -157,61 +163,32 @@ nav {
 	text-shadow: 0px 0px 1px rgb(227, 216, 227);
 }
 
-#main {
-	margin: 1em;
-		@media screen and (min-width: 980px)  {
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
-		flex: 1 0 auto;
-	}
-}
+
 .cranky {
   color: $eggplant;
   font-weight: bold;
 }
-.aboutContent, aside {
-		margin-top: 2em;
-		box-shadow: inset 0px 0px 25px -2px $lavender;
-}
-.aboutContent {
-	background-color: $white;
-	padding: 1.5em;
-	display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-		h2 {
-		color: $eggplant;
-    font-size: 2em;
-    align-self: flex-start;
-		}
-	@media screen and (min-width: 980px)  {
-		flex: 0 0 50%;
-		margin-right: 2em;
-	}
-}
-.imgWithText {
-	img {
-			width: 100%;
-			@media screen and (min-width: 768px){
-				width: 45%;
-				float: left;
-				margin-right: 1em;
-			}
-			@media screen and (min-width: 980px){
-				width: 100%;
-			}
-	}
-}
 
+.main {
+	display: flex;
+	padding: 1em;
+	flex-direction: column;
+}
+.imgWithText{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+.aboutImg {
+	width: 80%;
+}
+.titleHeader {
+	color: $eggplant;
+	font-size: 1.5em;
+}
 aside {
 	background-color: $white;
-	padding: 1.5em;
-	@media screen and (min-width: 980px)  {
-		flex: 0 0 18em;
-		
-	}
 }
 
 .iconRow {
@@ -219,24 +196,19 @@ aside {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
-		@media screen and (min-width: 768px){
+		@media (min-width: 768px){
 			justify-content: flex-start;
 		}
-		
 		li {
 			padding: 0 0.4em;
-			@media screen and (min-width: 980px){
+			@media (min-width: 980px){
 				padding: 0 0.5em;
 			}
 		}
 	}
 }
 
-.title {
-	 h3 {
-		color: $eggplant;
-		font-size: 1.5em;
-	}
+.socialMedia {
 	hr {
 		border-width: 1px;
 		text-align: center;
@@ -258,7 +230,7 @@ aside {
 .socialMedia-holder {
 	position: relative;
 	display: inline-block;
-	width: 9.5em;
+	width: 10em;
 	height: 2.25em;
 	margin: 0.35em 0.1em;
 	//rotation controlled with perspective:
@@ -320,12 +292,7 @@ aside {
   }
 }
 
-.content {
-	flex: 1 0 auto;
-}
-.clear {
-	clear: both;
-}
+
 
 footer {
 	background-color: $lilac;
