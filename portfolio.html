@@ -34,13 +34,13 @@
 			</div>
 		</header>
 		
- 	
-		<section class="main site-content">
 
-			<article class="aboutContent">
-						<h3 class="titleHeader">Portfolio</h3>
-						<hr>
+		<section class="portMain site-content">
+			<article class="portContent">
+				<h3 class="titleHeader">Portfolio</h3>
+				<hr>
 						<section class="projectHolder">
+              <!-- LIRI -->
               <div class="projectFrame">
                 <div class="projectPic">
                     <img src="./assets/liri-app.gif" alt="gif of code">
@@ -50,50 +50,121 @@
                     </a>
                 </div>
                 <div class="projectDesc">
-                  <div class="projectPara">
-                    <p>Horrido! Schabracke und Schlachtschüssel grämen emsig Waschweib. Der kess Wildfang foppen. Feuertaufe und Eisbein abkupfern pompös Donnerwetter. Der Lümmel piesacken die gemach Lausbub. Die Wuchtbrumme abkupfern die hochnäsig Tölpel.</p>
-                  </div>
-                  <div class="projectLinks">
+                  <p>Who is LIRI? LIRI is not who but a what: <span class="cranky">_Language_ Interpretation and Recognition Interface</span> built with NodeJS. LIRI understands four commands which are take the user&apos;s using Inquirer and presents the data with cli-table.</p>
+                </div>
+                <div class="projectLinks">
                     <ul>
-                      <li><a href="#">Live</a></li>
-                      <li><a href="#">Code</a></li>
+                      <li><a href="https://api.glitch.com/liri-app-ihatetoast/console/5d64b962-3587-4175-9126-87319dd49cd0/" target="_blank">Demo (Glitch.com)</a></li>
+                      <li><a href="https://github.com/ihatetoast/liri-node-app" target="_blank">Code</a></li>
                     </ul>
                   </div>
-                </div>
               </div>
-
-							<div class="projectPic">
-								<img src="./assets/images/hangman.svg" alt="image from a hangman game">
-								<a href=" http://www.ihatetoast.com/hangman-game/">
-									<div class="projectTitleBar0"></div>
-									<div class="projectTitleBar1"><h4>Hangman</h4></div>
-								</a>
-              </div>
-              
-              <div class="projectPic">
-                <img src="./assets/images/day49.png" alt="dance dance revolution pad">
-                <a href="http://ihatetoast-css-images.surge.sh/" target="_blank">
-                  <div class="projectTitleBar0"></div>
-                  <div class="projectTitleBar1"><h4>50 Pure CSS Images</h4>
+                
+                <!-- HANGMAN -->
+                <div class="projectFrame">
+                  <div class="projectPic">
+                    <img src="./assets/images/hangman.svg" alt="image from a hangman game">
+								    <a href=" http://www.ihatetoast.com/hangman-game/">
+									    <div class="projectTitleBar0"></div>
+									    <div class="projectTitleBar1"><h4>Hangman</h4></div>
+								    </a>
                   </div>
-                </a>
-              </div>
+                  <div class="projectDesc">
+                    <p>The classic game to wile away time. Built with vanilla JavaScript and Sass. My own illustrations using Sketch App. </p>
+                  </div>
 
-              <div class="projectPic">
-                <img src="./assets/images/stan.jpg" alt="a woman kissing a greyhound">
-                <a href="https://ihatetoast-crittersitter.herokuapp.com/home" target="_blank">
-                  <div class="projectTitleBar0"></div>
-                  <div class="projectTitleBar1"><h4>Critter Sitter</h4></div>
-                </a>
-              </div>
+                  <div class="projectLinks">
+                      <ul>
+                        <li><a href="http://www.ihatetoast.com/hangman-game/" target="_blank">Play</a></li>
+                        <li><a href="https://github.com/ihatetoast/hangman-game" target="_blank">Code</a></li>
+                      </ul>
+                    </div>
+                </div>
 
-							<div class="projectPic">
-								<img src="./assets/images/eggfoxfeathers.svg" alt="Foxes, eggs, and feathers in varying states of discomfort">
-								<a href="http://www.ihatetoast.com/eggfoxfeathers/" target="_blank">
-									<div class="projectTitleBar0"></div>
-									<div class="projectTitleBar1"><h4>Egg Feathers Fox</h4></div>
-								</a>
-              </div>
+                <!-- PURE CSS IMAGES -->
+                <div class="projectFrame">
+                  <div class="projectPic">
+                    <img src="./assets/images/day49.png" alt="dance dance revolution pad">
+                    <a href="http://ihatetoast-css-images.surge.sh/" target="_blank">
+                      <div class="projectTitleBar0"></div>
+                      <div class="projectTitleBar1"><h4>50 Pure CSS Images</h4>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="projectDesc">
+                    <p>Pure CSS Images is the result of taking part in the <a href="http://dailycssimages.com/" target="_blank">Daily CSS Images</a> challenge. I made various images using only CSS/Sass and Pug/Jade. Although this was a CSS project and I learned a lot about Sass (mixins and keyframes), I also learned about Pug. Using Pug allowed me to use for-loops, a necessary tool to make carbonated bubbles!</p>
+                  </div>
+                  <div class="projectLinks">
+                      <ul>
+                        <li><a href="http://ihatetoast-css-images.surge.sh/" target="_blank">Log</a></li>
+                        <li><a href="https://codepen.io/collection/ABQNGQ/" target="_blank">Code</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                <!-- EGGS FOX FEATHERS: RPS -->
+                <div class="projectFrame">
+                    <div class="projectPic">
+                      <img src="./assets/images/eggfoxfeathers.svg" alt="Foxes, eggs, and feathers in varying states of discomfort">
+                      <a href="http://www.ihatetoast.com/eggfoxfeathers/" target="_blank">
+                        <div class="projectTitleBar0"></div>
+                        <div class="projectTitleBar1"><h4>Egg Feathers Fox</h4></div>
+                      </a>
+                    </div>
+                    <div class="projectDesc">
+                      <p>Egg Feathers Fox was my version of Rock Paper Scissors. While practicing various algorithms, I wondered why a rock, paper, and scissors were ever near each other or even held a grudge. Foxes and chickens, however ... </p>
+                      <p>I build Egg Feathers Fox using vanilla JavaScript, Sass, and my own SVGs (Sketch).</p>
+                    </div>
+                    <div class="projectLinks">
+                        <ul>
+                          <li><a href="http://ihatetoast-eggfeathersfox.surge.sh/" target="_blank">Play</a></li>
+                          <li><a href="https://github.com/ihatetoast/eggfoxfeathers" target="_blank">Code</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- REACT: CRITTER SITTER -->
+                <div class="projectFrame">
+                  <div class="projectPic">
+                    <img src="./assets/images/stan.jpg" alt="a woman kissing a greyhound">
+                    <a href="https://ihatetoast-crittersitter.herokuapp.com/home" target="_blank">
+                      <div class="projectTitleBar0"></div>
+                      <div class="projectTitleBar1"><h4>Critter Sitter</h4></div>
+                    </a>
+                  </div>
+                    <div class="projectDesc">
+                      <p>Critter Sitter is a petsitting-swap app, where people with pets find others for taking turn petsitting, thus avoiding the expense of hiring a petsitter. </p>
+                      <p>Critter Sitter was built with ReactJS, Backbone models and collections, Express, Node, and PSQL.</p>
+                    </div>
+                    <div class="projectLinks">
+                        <ul>
+                          <li><a href="https://ihatetoast-crittersitter.herokuapp.com/home" target="_blank">Demo</a></li>
+                          <li><a href="https://github.com/ihatetoast/CritterSitter" target="_blank">Code</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                         <!-- REACT: CRITTER SITTER -->
+                <div class="projectFrame">
+                  <div class="projectPic">
+                    <img src="./assets/images/creepyman.svg" alt="a man in a blue hoodie">
+                    <a href="http://ihatetoast-dodgy-harold.surge.sh/" target="_blank">
+                      <div class="projectTitleBar0"></div>
+                      <div class="projectTitleBar1"><h4>Dodgy Harold</h4></div>
+                    </a>
+                  </div>
+                    <div class="projectDesc">
+                      <p>Dodgy Harold happened when I could not decide whether to practice Sketch or AJAX calls to APIs.</p>
+                      <p>It is easy to get stuck in the serious gear while learning JavaScript, so I make a point of creating little apps that do nothing but entertain me.</p>
+                    </div>
+                    <div class="projectLinks">
+                        <ul>
+                          <li><a href="http://ihatetoast-dodgy-harold.surge.sh/" target="_blank">Get Advice</a></li>
+                          <li><a href="https://github.com/ihatetoast/creepyman-advice" target="_blank">Code</a></li>
+                        </ul>
+                      </div>
+                      </div>
+<!-- 
 
 							<div class="projectPic">
 								<img src="./assets/images/creepyman.svg" alt="a man in a blue hoodie">
@@ -102,93 +173,92 @@
 									<div class="projectTitleBar1"><h4>Dodgy Harold</h4></div>
 								</a>
 							</div>
-							
-						</section>
-					</article>
-
-			<aside>
-				<div class="socialMedia">
-					<h3 class="titleHeader">Find Me</h3>
-					<hr>
-					<div class="socialMedia-container">
-
-						<a href="https://github.com/ihatetoast" target="_blank" class="socialMedia-holder gitHub">
-							<div class="block">
-								<div class="socialMediaPlatform">
-									GitHub
-								</div>
-								<div class="socialMediaHandle">
-									<i class="fa fa-github fa-lg github icons" id="dribbble" aria-hidden="true"></i>
-									<span>ihatetoast</span>
-								</div>
-							</div>
-						</a>
-
-						<a href="https://codepen.io/ihatetoast/" target="_blank" class="socialMedia-holder codePen">
-							<div class="block">
-								<div class="socialMediaPlatform">
-									CodePen
-								</div>
-								<div class="socialMediaHandle">
-									<i class="fa fa-codepen fa-lg codepen icons" id="codePen" aria-hidden="true"></i>
-									<span>ihatetoast</span>
-								</div>
-							</div>
-						</a>
+							-->
 						
-						<a href="https://dribbble.com/ihatetoast" target="_blank" class="socialMedia-holder dribbble">
-							<div class="block">
-								<div class="socialMediaPlatform">
-									Dribbble
-								</div>
-								<div class="socialMediaHandle">
-									<i class="fa fa-dribbble fa-lg dribbble icons" id="dribbble" aria-hidden="true"></i>
-									<span>ihatetoast</span>
-								</div>
-							</div>
-						</a>
-
-						<a href="https://twitter.com/i_hate_toast" target="_blank" class="socialMedia-holder twitter">
-							<div class="block">
-								<div class="socialMediaPlatform">
-									Twitter
-								</div>
-								<div class="socialMediaHandle">
-									<i class="fa fa-twitter fa-lg twitter icons" id="twitter" aria-hidden="true"></i>
-									<span>@i_hate_toast</span>
-								</div>
-							</div>
-						</a>
-
-						<a href="https://ihatetoast.io/" target="_blank" class="socialMedia-holder wordPress">
-							<div class="block">
-								<div class="socialMediaPlatform">
-									WordPress
-								</div>
-								<div class="socialMediaHandle">
-									<i class="fa fa-wordpress fa-lg wordPress icons" id="wordPress" aria-hidden="true"></i>
-									<span>ihatetoast</span>
-								</div>
-							</div>
-						</a>
-						<a href="https://www.linkedin.com/in/cassidykaty/" class="socialMedia-holder linkedIn">
-							<div class="block">
-								<div class="socialMediaPlatform">
-									LinkedIn
-								</div>
-								<div class="socialMediaHandle">
-									<i class="fa fa-linkedin fa-lg linkedIn icons" target="_blank" id="linkedin" aria-hidden="true"></i>
-									<span>ihatetoast</span>
-								</div>
-							</div>
-						</a>
-
-					</div>
-					<div class="clear"></div>
-				</div>
-			</aside>
-
-		</section>
+					</article> 
+ 
+          <aside class="socialMedia">
+              <div >
+                <h3 class="titleHeader">Find Me</h3>
+                <hr>
+                <div class="socialMedia-container">
+      
+                  <a href="https://github.com/ihatetoast" target="_blank" class="socialMedia-holder gitHub">
+                    <div class="block">
+                      <div class="socialMediaPlatform">
+                        GitHub
+                      </div>
+                      <div class="socialMediaHandle">
+                        <i class="fa fa-github fa-lg github icons" id="dribbble" aria-hidden="true"></i>
+                        <span>ihatetoast</span>
+                      </div>
+                    </div>
+                  </a>
+      
+                  <a href="https://codepen.io/ihatetoast/" target="_blank" class="socialMedia-holder codePen">
+                    <div class="block">
+                      <div class="socialMediaPlatform">
+                        CodePen
+                      </div>
+                      <div class="socialMediaHandle">
+                        <i class="fa fa-codepen fa-lg codepen icons" id="codePen" aria-hidden="true"></i>
+                        <span>ihatetoast</span>
+                      </div>
+                    </div>
+                  </a>
+                  
+                  <a href="https://dribbble.com/ihatetoast" target="_blank" class="socialMedia-holder dribbble">
+                    <div class="block">
+                      <div class="socialMediaPlatform">
+                        Dribbble
+                      </div>
+                      <div class="socialMediaHandle">
+                        <i class="fa fa-dribbble fa-lg dribbble icons" id="dribbble" aria-hidden="true"></i>
+                        <span>ihatetoast</span>
+                      </div>
+                    </div>
+                  </a>
+      
+                  <a href="https://twitter.com/i_hate_toast" target="_blank" class="socialMedia-holder twitter">
+                    <div class="block">
+                      <div class="socialMediaPlatform">
+                        Twitter
+                      </div>
+                      <div class="socialMediaHandle">
+                        <i class="fa fa-twitter fa-lg twitter icons" id="twitter" aria-hidden="true"></i>
+                        <span>@i_hate_toast</span>
+                      </div>
+                    </div>
+                  </a>
+      
+                  <a href="https://ihatetoast.io/" target="_blank" class="socialMedia-holder wordPress">
+                    <div class="block">
+                      <div class="socialMediaPlatform">
+                        WordPress
+                      </div>
+                      <div class="socialMediaHandle">
+                        <i class="fa fa-wordpress fa-lg wordPress icons" id="wordPress" aria-hidden="true"></i>
+                        <span>ihatetoast</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="https://www.linkedin.com/in/cassidykaty/" target="_blank" class="socialMedia-holder linkedIn">
+                    <div class="block">
+                      <div class="socialMediaPlatform">
+                        LinkedIn
+                      </div>
+                      <div class="socialMediaHandle">
+                        <i class="fa fa-linkedin fa-lg linkedIn icons" id="linkedin" aria-hidden="true"></i>
+                        <span>ihatetoast</span>
+                      </div>
+                    </div>
+                  </a>
+      
+                </div>
+                <div class="clear"></div>
+              </div>
+            </aside>
+		  </section>
 
 
 		<footer>
@@ -197,11 +267,25 @@
 	</body>
 </html>
 
-<!-- template: -->
-<!-- <div class="projectPic">
-    <img src="./assets/images/xxx" alt="ruth bader ginsburg">
-    <a href="#">
-      <div class="projectTitleBar0"></div>
-      <div class="projectTitleBar1"><h4>Notorious RBG Game</h4></div>
-    </a>
-  </div> -->
+<!-- PROJECT TEMPLATE: -->
+<!-- 
+              <div class="projectFrame">
+                  <div class="projectPic">
+                      <img src="./assets/liri-app.gif" alt="gif of code">
+                      <a href="https://github.com/ihatetoast/liri-node-app">
+                        <div class="projectTitleBar0"></div>
+                        <div class="projectTitleBar1"><h4>LIRI</h4></div>
+                      </a>
+                  </div>
+                  <div class="projectDesc">
+                    <div class="projectPara">
+                      <p>Horrido! Schabracke und Schlachtschüssel grämen emsig Waschweib. Der kess Wildfang foppen. Feuertaufe und Eisbein abkupfern pompös Donnerwetter. Der Lümmel piesacken die gemach Lausbub. Die Wuchtbrumme abkupfern die hochnäsig Tölpel.</p>
+                    </div>
+                    <div class="projectLinks">
+                      <ul>
+                        <li><a href="#">Live</a></li>
+                        <li><a href="#">Code</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div> -->
