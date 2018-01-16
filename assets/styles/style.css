@@ -315,10 +315,6 @@ input, textarea {
     .projectHolder {
       flex-direction: column; } }
 
-.projectFrame {
-  border: 1px solid green;
-  background-color: #c7c7c7; }
-
 .projectPic {
   display: inline-block;
   box-shadow: 2px 2px 15px 1px #ccc;
