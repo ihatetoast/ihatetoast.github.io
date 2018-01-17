@@ -403,13 +403,12 @@ input, textarea {
 .projectFrame{
   display:flex;
   flex-direction: column;
-  flex-basis: 100%;
   background-color:#ededed;
   margin-bottom: 0.5em;
   padding: 0.5em;
   padding-bottom: 1em;
   @media(min-width: 768px){
-    flex-basis: 48%;
+    flex-basis: 45%;
   }
 }
 .projectPic {
