@@ -1,404 +1,55 @@
-* {
-  box-sizing: border-box; }
+/*
+Error: Invalid CSS after "border-box": expected expression (e.g. 1px, bold), was "; }"
+        on line 2 of style.css
 
-body {
-  background-image: url("../images/paper/paper.png");
-  font-family: 'Chivo', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-  line-height: 1.5;
-  align-items: center; }
+1: * {
+2:   box-sizing: border-box; }
+3: 
+4: body {
+5:   background-image: url("../images/paper/paper.png");
+6:   font-family: 'Chivo', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+7:   line-height: 1.5;
 
-.site {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column; }
-
-.site-content {
-  flex: 1 0 auto; }
-
-.clear {
-  clear: both; }
-
-h1, h2, h3 {
-  font-family: 'Asul','Georgia', serif; }
-
-h4 {
-  color: #f5f8fa; }
-
-a {
-  text-decoration: none; }
-  a:hover {
-    cursor: pointer; }
-
-p {
-  margin: 1em 0.5em; }
-
-hr {
-  border-color: #c6b1c7;
-  margin: 1em 0 1.5em 0; }
-
-header {
-  background-color: #f5f8fa;
-  border-bottom: 1px solid #97919f; }
-
-header, footer {
-  width: 100%; }
-
-.content-header {
-  display: flex;
-  flex-direction: column; }
-  @media (min-width: 699px) {
-    .content-header {
-      padding: 0 1em;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-end; } }
-
-.brand {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 0%; }
-  @media (min-width: 899px) {
-    .brand {
-      margin-left: 10%; } }
-
-.name {
-  background-color: #652e67;
-  color: #f5f8fa;
-  font-size: 2em;
-  letter-spacing: 0.1em;
-  padding: 0.75em;
-  flex-grow: 1; }
-  .name h1 {
-    text-align: center; }
-
-nav {
-  display: flex;
-  justify-content: center;
-  margin-right: 0%; }
-  @media (min-width: 899px) {
-    nav {
-      margin-right: 8%; } }
-
-#navLinks {
-  display: flex; }
-  #navLinks li {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    margin: 1em;
-    flex-grow: 1; }
-    @media (min-width: 899px) {
-      #navLinks li {
-        font-size: 1.2em;
-        padding: 0 0.5em; } }
-
-#ihtlogo {
-  box-sizing: content;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  background-color: #f5f8fa;
-  display: inline-block;
-  padding-top: 0.1em; }
-  #ihtlogo img {
-    width: 80%;
-    height: 80%; }
-
-.inactive {
-  color: #c6b1c7; }
-
-.active {
-  color: #bf819d;
-  font-weight: bold; }
-
-.inactive:hover {
-  color: #652e67;
-  text-shadow: 0px 0px 1px #e3d8e3; }
-
-.cranky {
-  color: #652e67;
-  font-weight: bold; }
-
-.main {
-  display: flex;
-  padding: 1em;
-  width: 80%;
-  flex-direction: column; }
-  @media (min-width: 899px) {
-    .main {
-      align-items: flex-start;
-      flex-direction: row;
-      justify-content: space-between; } }
-
-aside, article {
-  background-color: #f5f8fa;
-  margin-bottom: 1em; }
-
-.aboutContent {
-  display: flex;
-  flex-direction: column;
-  padding: 1em; }
-  @media (min-width: 899px) {
-    .aboutContent {
-      flex-basis: 70%; } }
-
-.bikeImg {
-  width: 80%;
-  margin: 1em auto; }
-
-.aboutImg {
-  width: 80%; }
-
-.titleHeader {
-  color: #652e67;
-  font-size: 1.5em; }
-
-.imgWithText {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; }
-
-.iconRow ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; }
-  @media (min-width: 768px) {
-    .iconRow ul {
-      justify-content: flex-start; } }
-  .iconRow ul li {
-    padding: 0 0.4em; }
-    @media (min-width: 980px) {
-      .iconRow ul li {
-        padding: 0 0.5em; } }
-
-.socialMedia {
-  display: flex;
-  flex-direction: column;
-  padding: 1em; }
-  @media (min-width: 899px) {
-    .socialMedia {
-      flex-basis: 25%; } }
-  .socialMedia hr {
-    border-width: 1px;
-    text-align: center; }
-
-.icons {
-  margin: 0em 0.25em;
-  float: left; }
-
-.socialMedia-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center; }
-  @media (min-width: 899px) {
-    .socialMedia-container {
-      flex-direction: column; } }
-
-.socialMedia-holder {
-  position: relative;
-  display: inline-block;
-  width: 44%;
-  height: 2.25em;
-  margin-top: .30em;
-  margin-left: 3%;
-  margin-right: 3%;
-  perspective: 500px; }
-  @media (min-width: 899px) {
-    .socialMedia-holder {
-      width: 80%; } }
-  .socialMedia-holder .block {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: all 1s;
-    transform: translateZ(-18px); }
-    .socialMedia-holder .block .socialMediaPlatform, .socialMedia-holder .block .socialMediaHandle {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #f5f8fa;
-      transition: background 1s; }
-    .socialMedia-holder .block .socialMediaPlatform {
-      transform: rotateX(0deg) translateZ(18px); }
-    .socialMedia-holder .block .socialMediaHandle {
-      transform: rotateX(-90deg) translateZ(18px); }
-  .socialMedia-holder:hover .block {
-    transform: translateZ(-18px) rotateX(90deg); }
-
-.socialMedia-holder.twitter .block .socialMediaPlatform, .socialMedia-holder.twitter .block .socialMediaHandle {
-  background: #00aced; }
-.socialMedia-holder.twitter .block .socialMediaHandle {
-  background: #004f6e; }
-.socialMedia-holder.twitter:hover .block .socialMediaHandle {
-  background: #00aced; }
-.socialMedia-holder.twitter:hover .block .socialMediaPlatform {
-  background: #6ed7ff; }
-.socialMedia-holder.linkedIn .block .socialMediaPlatform, .socialMedia-holder.linkedIn .block .socialMediaHandle {
-  background: #007bb5; }
-.socialMedia-holder.linkedIn .block .socialMediaHandle {
-  background: #002436; }
-.socialMedia-holder.linkedIn:hover .block .socialMediaHandle {
-  background: #007bb5; }
-.socialMedia-holder.linkedIn:hover .block .socialMediaPlatform {
-  background: #36beff; }
-.socialMedia-holder.wordPress .block .socialMediaPlatform, .socialMedia-holder.wordPress .block .socialMediaHandle {
-  background: #21759b; }
-.socialMedia-holder.wordPress .block .socialMediaHandle {
-  background: #0b2632; }
-.socialMedia-holder.wordPress:hover .block .socialMediaHandle {
-  background: #21759b; }
-.socialMedia-holder.wordPress:hover .block .socialMediaPlatform {
-  background: #5fb6dd; }
-.socialMedia-holder.gitHub .block .socialMediaPlatform, .socialMedia-holder.gitHub .block .socialMediaHandle {
-  background: #787878; }
-.socialMedia-holder.gitHub .block .socialMediaHandle {
-  background: #383838; }
-.socialMedia-holder.gitHub:hover .block .socialMediaHandle {
-  background: #787878; }
-.socialMedia-holder.gitHub:hover .block .socialMediaPlatform {
-  background: #b8b8b8; }
-.socialMedia-holder.dribbble .block .socialMediaPlatform, .socialMedia-holder.dribbble .block .socialMediaHandle {
-  background: #ea4c89; }
-.socialMedia-holder.dribbble .block .socialMediaHandle {
-  background: #a3134b; }
-.socialMedia-holder.dribbble:hover .block .socialMediaHandle {
-  background: #ea4c89; }
-.socialMedia-holder.dribbble:hover .block .socialMediaPlatform {
-  background: #f7bed4; }
-.socialMedia-holder.codePen .block .socialMediaPlatform, .socialMedia-holder.codePen .block .socialMediaHandle {
-  background: #191919; }
-.socialMedia-holder.codePen .block .socialMediaHandle {
-  background: black; }
-.socialMedia-holder.codePen:hover .block .socialMediaHandle {
-  background: #191919; }
-.socialMedia-holder.codePen:hover .block .socialMediaPlatform {
-  background: #595959; }
-
-footer {
-  background-color: #c6b1c7;
-  color: #fff;
-  padding: 0.6em;
-  border-top: 4px solid #652e67; }
-
-footer p {
-  font-size: 0.75em;
-  text-align: center; }
-
-label {
-  color: #97919f;
-  display: block;
-  margin: 0.75em 0 0.25em 0; }
-
-input, textarea {
-  width: 100%;
-  font-size: 1em;
-  padding: 0.5em; }
-
-#subBtn {
-  background-color: #652e67;
-  color: #f5f8fa;
-  font-size: 1em;
-  margin-top: 0.75em;
-  padding: 0.75em 1.5em;
-  border-width: 0; }
-
-#subBtn:hover {
-  background-color: #c6b1c7;
-  color: #652e67; }
-
-.portMain {
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
-  width: 100%; }
-  @media (min-width: 899px) {
-    .portMain {
-      flex-direction: row; } }
-
-.portContent {
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
-  flex-basis: 90%; }
-
-.projectHolder {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; }
-  @media (min-width: 768px) {
-    .projectHolder {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between; } }
-
-.projectFrame {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  background-color: #ededed;
-  margin-bottom: 0.5em;
-  padding: 0.5em;
-  padding-bottom: 1em; }
-  @media (min-width: 768px) {
-    .projectFrame {
-      flex-basis: 48%; } }
-
-.projectPic {
-  display: inline-block;
-  box-shadow: 2px 2px 15px 1px #ccc;
-  background-color: #e7f3fe;
-  position: relative;
-  margin: 1em 0.7em;
-  overflow: hidden; }
-  .projectPic img {
-    width: 100%; }
-  @media screen and (min-width: 768px) {
-    .projectPic {
-      flex-basis: 48%;
-      margin: 1em 0em; } }
-
-.projectDesc {
-  flex: 1; }
-
-.projectLinks {
-  color: #652e67;
-  font-size: 1em; }
-  .projectLinks ul {
-    display: flex;
-    justify-content: space-between; }
-    .projectLinks ul li {
-      font-size: 1.2em;
-      margin-right: 5%;
-      margin-left: 5%; }
-      .projectLinks ul li a {
-        color: #652e67; }
-
-.projectTitleBar0 {
-  background-color: #652e67;
-  opacity: 0.8;
-  position: absolute;
-  bottom: 5%;
-  width: 100%;
-  height: 3em;
-  z-index: 0; }
-
-.projectTitleBar1 {
-  position: absolute;
-  text-align: center;
-  font-size: 2em;
-  bottom: 5%;
-  width: 100%;
-  z-index: 1; }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+style.css:2
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1207:in `expected'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/script/lexer.rb:229:in `expected!'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/script/parser.rb:744:in `assert_done'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/script/parser.rb:76:in `parse'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/script/parser.rb:240:in `parse'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/script.rb:27:in `parse'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:1151:in `parse_script'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:721:in `parse_property'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:692:in `parse_property_or_rule'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:658:in `parse_line'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:536:in `build_tree'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:555:in `block in append_children'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:554:in `each'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:554:in `append_children'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:545:in `block in build_tree'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:538:in `each'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:538:in `build_tree'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:555:in `block in append_children'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:554:in `each'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:554:in `append_children'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:409:in `_to_tree'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:294:in `watch'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/plugin.rb:109:in `method_missing'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.24/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"border-box\": expected expression (e.g. 1px, bold), was \"; }\"\A         on line 2 of style.css\A \A 1: * {\A 2:   box-sizing: border-box; }\A 3: \A 4: body {\A 5:   background-image: url(\"../images/paper/paper.png\");\A 6:   font-family: 'Chivo', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;\A 7:   line-height: 1.5;"; }
