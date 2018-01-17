@@ -351,7 +351,6 @@ input, textarea {
       flex-basis: 45%; } }
 
 .projectPic {
-  display: inline-block;
   box-shadow: 2px 2px 15px 1px #ccc;
   background-color: #e7f3fe;
   position: relative;
