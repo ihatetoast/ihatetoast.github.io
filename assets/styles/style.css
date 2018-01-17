@@ -345,8 +345,7 @@ input, textarea {
   background-color: #ededed;
   margin-bottom: 0.5em;
   padding: 0.5em;
-  padding-bottom: 1em;
-  position: relative; }
+  padding-bottom: 1em; }
   @media (min-width: 768px) {
     .projectFrame {
       flex-basis: 45%; } }
@@ -380,6 +379,11 @@ input, textarea {
       margin-left: 5%; }
       .projectLinks ul li a {
         color: #652e67; }
+
+.projectTitleBar {
+  background-color: #652e67;
+  padding: 0.5em 1em;
+  text-align: center; }
 
 .projectTitleBar0 {
   background-color: #652e67;

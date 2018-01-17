@@ -407,7 +407,6 @@ input, textarea {
   margin-bottom: 0.5em;
   padding: 0.5em;
   padding-bottom: 1em;
-  position: relative;
   @media(min-width: 768px){
     flex-basis: 45%;
   }
@@ -445,6 +444,11 @@ input, textarea {
   }
   color: $eggplant;
   font-size: 1em;
+}
+.projectTitleBar {
+	background-color: $eggplant;
+  padding: 0.5em 1em;
+  text-align: center;
 }
 .projectTitleBar0 {
 	background-color: $eggplant;
