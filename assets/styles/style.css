@@ -345,12 +345,14 @@ input, textarea {
   background-color: #ededed;
   margin-bottom: 0.5em;
   padding: 0.5em;
-  padding-bottom: 1em; }
+  padding-bottom: 1em;
+  position: relative; }
   @media (min-width: 768px) {
     .projectFrame {
       flex-basis: 45%; } }
 
 .projectPic {
+  display: inline-block;
   box-shadow: 2px 2px 15px 1px #ccc;
   background-color: #e7f3fe;
   position: relative;
