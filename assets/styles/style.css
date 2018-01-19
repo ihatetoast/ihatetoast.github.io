@@ -317,8 +317,7 @@ input, textarea {
 .portMain {
   display: flex;
   flex-direction: column;
-  padding: 1em;
-  width: 100%; }
+  padding: 1em; }
   @media (min-width: 899px) {
     .portMain {
       flex-direction: row; } }
@@ -349,20 +348,9 @@ input, textarea {
   @media (min-width: 768px) {
     .projectFrame {
       flex-basis: 45%; } }
-
-.projectPic {
-  display: inline-block;
-  box-shadow: 2px 2px 15px 1px #ccc;
-  background-color: #e7f3fe;
-  position: relative;
-  margin: 1em 0.7em;
-  overflow: hidden; }
-  .projectPic img {
-    width: 100%; }
-  @media screen and (min-width: 768px) {
-    .projectPic {
-      flex-basis: 48%;
-      margin: 1em 0em; } }
+  @media (min-width: 959px) {
+    .projectFrame {
+      flex-basis: 30%; } }
 
 .projectDesc {
   flex: 1; }
@@ -380,26 +368,26 @@ input, textarea {
       .projectLinks ul li a {
         color: #652e67; }
 
-.projectTitleBar {
-  background-color: #652e67;
-  padding: 0.5em 1em;
-  text-align: center; }
-
-.projectTitleBar0 {
-  background-color: #652e67;
-  opacity: 0.8;
-  position: absolute;
-  bottom: 5%;
-  width: 100%;
-  height: 3em;
-  z-index: 0; }
-
-.projectTitleBar1 {
-  position: absolute;
-  text-align: center;
-  font-size: 2em;
-  bottom: 5%;
-  width: 100%;
-  z-index: 1; }
+.portfolio {
+  overflow: auto;
+  position: relative;
+  width: 275px;
+  height: 220px;
+  float: left;
+  margin: 0.5em auto; }
+  .portfolio p {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    background-color: #652e67d4;
+    text-align: center;
+    color: #f5f8fa;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .portfolio img {
+    width: 275px;
+    height: 220px; }
 
 /*# sourceMappingURL=style.css.map */
