@@ -320,13 +320,20 @@ input, textarea {
   padding: 1em; }
   @media (min-width: 899px) {
     .portMain {
-      flex-direction: row; } }
+      flex-direction: row;
+      justify-content: space-between; } }
 
 .portContent {
   display: flex;
   flex-direction: column;
   padding: 1em;
   flex-basis: 90%; }
+  @media (min-width: 768px) {
+    .portContent {
+      flex-basis: 50%;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap; } }
 
 .projectHolder {
   display: flex;
@@ -340,6 +347,7 @@ input, textarea {
 
 .projectFrame {
   display: flex;
+  position: relative;
   flex-direction: column;
   background-color: #ededed;
   margin-bottom: 0.5em;
@@ -351,9 +359,6 @@ input, textarea {
   @media (min-width: 959px) {
     .projectFrame {
       flex-basis: 30%; } }
-
-.projectDesc {
-  flex: 1; }
 
 .projectLinks {
   color: #652e67;
@@ -369,7 +374,7 @@ input, textarea {
         color: #652e67; }
 
 .portfolio {
-  overflow: auto;
+  overflow: hidden;
   position: relative;
   width: 275px;
   height: 220px;
