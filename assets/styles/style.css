@@ -338,13 +338,8 @@ input, textarea {
 
 .projectHolder {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start; }
-  @media (min-width: 768px) {
-    .projectHolder {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center; } }
+  flex-wrap: wrap;
+  justify-content: center; }
 
 .projectFrame {
   display: flex;
@@ -352,18 +347,16 @@ input, textarea {
   align-items: center;
   background-color: #ededed;
   margin-bottom: 0.5em;
-  padding: 0.5em;
-  padding-bottom: 1em; }
+  padding: 0.5em; }
 
 .projectLinks {
   width: 100%;
-  color: #652e67;
-  font-size: 1em; }
+  color: #652e67; }
   .projectLinks ul {
     display: flex;
     justify-content: space-between; }
     .projectLinks ul li {
-      font-size: 1.2em;
+      font-size: 0.7em;
       margin-right: 5%;
       margin-left: 5%; }
       .projectLinks ul li a {
@@ -371,7 +364,7 @@ input, textarea {
 
 .portfolio {
   overflow: hidden;
-  width: 275px;
+  width: 95%;
   height: 220px;
   float: left; }
   .portfolio img {
@@ -381,7 +374,7 @@ input, textarea {
 .titleBar {
   background-color: #652e67;
   text-align: center;
-  width: 100%; }
+  width: 95%; }
   .titleBar p {
     color: #f5f8fa;
     margin: 0.2em; }

@@ -394,13 +394,8 @@ input, textarea {
 
 .projectHolder {
 	display:flex;
-  flex-direction: column;
-  justify-content: flex-start;
-	@media (min-width: 768px){
-		flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-	}
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .projectFrame{
   display: flex;
@@ -409,7 +404,6 @@ input, textarea {
   background-color: #ededed;
   margin-bottom: 0.5em;
   padding: 0.5em;
-  padding-bottom: 1em;
 }
 .projectLinks{
   width: 100%;
@@ -417,7 +411,7 @@ input, textarea {
     display: flex;
     justify-content: space-between;
     li {
-      font-size: 1.2em;
+      font-size: 0.7em;
       margin-right: 5%;
       margin-left: 5%;
       a {
@@ -426,18 +420,14 @@ input, textarea {
     }
   }
   color: $eggplant;
-  font-size: 1em;
 }
-
 
 
 .portfolio{
 	overflow: hidden;
-	// position: relative;
-	width: 275px;
+	width: 95%;
 	height: 220px;
 	float: left;
-  
     img {
       width: 275px;
       height: 220px;    
@@ -446,7 +436,7 @@ input, textarea {
 .titleBar {
   background-color: $eggplant;
   text-align:center;
-  width: 100%;
+  width: 95%;
   p{
     color: $white;  
     margin: 0.2em;
