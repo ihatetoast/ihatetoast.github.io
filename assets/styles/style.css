@@ -321,7 +321,8 @@ input, textarea {
   @media (min-width: 899px) {
     .portMain {
       flex-direction: row;
-      justify-content: space-between; } }
+      justify-content: space-between;
+      align-items: flex-start; } }
 
 .portContent {
   display: flex;
@@ -330,9 +331,9 @@ input, textarea {
   flex-basis: 90%; }
   @media (min-width: 768px) {
     .portContent {
-      flex-basis: 50%;
+      flex-basis: 65%;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: flex-start;
       flex-wrap: wrap; } }
 
 .projectHolder {
@@ -343,17 +344,19 @@ input, textarea {
     .projectHolder {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between; } }
+      justify-content: center; } }
 
 .projectFrame {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #ededed;
   margin-bottom: 0.5em;
   padding: 0.5em;
   padding-bottom: 1em; }
 
 .projectLinks {
+  width: 100%;
   color: #652e67;
   font-size: 1em; }
   .projectLinks ul {

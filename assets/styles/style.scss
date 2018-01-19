@@ -376,6 +376,7 @@ input, textarea {
   @media(min-width: 899px){
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 .portContent {
@@ -384,9 +385,9 @@ input, textarea {
   padding: 1em;
   flex-basis: 90%;
   @media (min-width: 768px){
-    flex-basis: 50%;
+    flex-basis: 65%;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 }
@@ -398,19 +399,20 @@ input, textarea {
 	@media (min-width: 768px){
 		flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 	}
 }
 .projectFrame{
-  display:flex;
-  // position: relative;
+  display: flex;
   flex-direction: column;
-  background-color:#ededed;
+  align-items: center;
+  background-color: #ededed;
   margin-bottom: 0.5em;
   padding: 0.5em;
   padding-bottom: 1em;
 }
 .projectLinks{
+  width: 100%;
   ul {
     display: flex;
     justify-content: space-between;
