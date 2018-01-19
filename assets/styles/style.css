@@ -149,7 +149,10 @@ aside, article {
 
 .titleHeader {
   color: #652e67;
-  font-size: 1.5em; }
+  font-size: 1em; }
+  @media screen and (min-width: 479px) {
+    .titleHeader {
+      font-size: 1.5em; } }
 
 .imgWithText {
   display: flex;
@@ -326,12 +329,11 @@ input, textarea {
 
 .portContent {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   padding: 1em;
   flex-basis: 90%; }
   @media (min-width: 768px) {
     .portContent {
-      flex-basis: 65%;
       flex-direction: row;
       justify-content: flex-start;
       flex-wrap: wrap; } }
@@ -339,7 +341,10 @@ input, textarea {
 .projectHolder {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: space-around; }
+  @media screen and (min-width: 1000px) {
+    .projectHolder {
+      justify-content: flex-start; } }
 
 .projectFrame {
   display: flex;
