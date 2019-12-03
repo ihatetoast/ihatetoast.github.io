@@ -377,7 +377,7 @@ input, textarea {
   flex-direction: column;
   padding: 1em;
   @media(min-width: 899px){
-    flex-direction: row;
+  
     justify-content: space-between;
     align-items: flex-start;
   }

@@ -149,7 +149,9 @@ aside, article {
 
 .titleHeader {
   color: #652e67;
-  font-size: 1em; }
+  font-size: 1em; 
+  width:100%
+}
   @media screen and (min-width: 479px) {
     .titleHeader {
       font-size: 1.5em; } }
@@ -323,7 +325,6 @@ input, textarea {
   padding: 1em; }
   @media (min-width: 899px) {
     .portMain {
-      flex-direction: row;
       justify-content: space-between;
       align-items: flex-start; } }
 
@@ -337,6 +338,13 @@ input, textarea {
       flex-direction: row;
       justify-content: flex-start;
       flex-wrap: wrap; } }
+
+.profProjHolder{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 
 .projectHolder {
   display: flex;
