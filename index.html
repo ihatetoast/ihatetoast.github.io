@@ -9,39 +9,170 @@
     />
     <meta name="author" content="Katy Cassidy | ihatetoast" />
     <title>Katy Cassidy: portfolio</title>
-
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
   </head>
 
   <body class="site">
-    <header>
+    <header class="split-screen-hero">
       <div class="content-header">
-        <div class="brand">
-          <div class="name">
-            <h1>
-              Katy
-              <div id="ihtlogo">
-                <img
-                  src="./assets/images/ihtLogo.png"
-                  alt="greyhound eating toast"
-                />
-              </div>
-              Cassidy
-            </h1>
-          </div>
+        <div class="headshot">
+          <!-- left two images as a circle. flip on hover  -->
+        </div>
+        <div class="details">
+          <h1>Katy Cassidy</h1>
+          <p class="subtitle">Frontend Developer</p>
+          <p class="tagline">Tagline la la la</p>
+          <nav class="social-links" aria-label="Social media">
+            <a
+              href="https://github.com/ihatetoast"
+              target="_blank"
+              aria-label="GitHub"
+              >GitHub</a
+            >
+            <a
+              href="https://codepen.io/ihatetoast/"
+              target="_blank"
+              aria-label="CodePen"
+              >CodePen</a
+            >
+            <a
+              href="https://www.linkedin.com/in/cassidykaty/"
+              target="_blank"
+              aria-label="LinkedIn"
+              >LinkedIn</a
+            >
+          </nav>
         </div>
       </div>
     </header>
+    <!-- WILL I NEED AN H2 INTRO TO ANY OF THESE?  -->
+    <section class="featured-projects">
+      <h2 class="sr-only">Featured Projects</h2>
+      <div class="project-grid">
 
-    <section class="main site-content">
-      <article class="aboutContent">
-        <h3 class="titleHeader">About Me</h3>
-      </article>
+        <div class="project-card">
+          <div class="img-container">
+            <img src="" alt="" />
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Project title ONE</h3>
+            <p class="project-description">
+              beep bop boop beep bop boop beep bop boop beep bop boop beep bop
+              boop beep bop boop
+            </p>
+            <ul>
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>CSS</li>
+            </ul>
+            <div class="project-links">
+              <li><a href="#" aria-role="button" class="btn btn-primary">Live Site</a></li>
+              <li><a href="#" aria-role="button"  class="btn btn-secondary">View Code</a></li>
+            </div>
+          </div>
+        </div>
+         <div class="project-card">
+          <div class="img-container">
+            <img src="" alt="" />
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Project title TWO</h3>
+            <p class="project-description">
+              beep bop boop beep bop boop beep bop boop beep bop boop beep bop
+              boop beep bop boop
+            </p>
+            <ul>
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>CSS</li>
+            </ul>
+            <div class="project-links">
+              <li><a href="#" aria-role="button" class="btn btn-primary">Live Site</a></li>
+              <li><a href="#" aria-role="button"  class="btn btn-secondary">View Code</a></li>
+            </div>
+          </div>
+        </div>
+         <div class="project-card">
+          <div class="img-container">
+            <img src="" alt="" />
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Project title THREE</h3>
+            <p class="project-description">
+              beep bop boop beep bop boop beep bop boop beep bop boop beep bop
+              boop beep bop boop
+            </p>
+            <ul>
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>CSS</li>
+            </ul>
+            <div class="project-links">
+              <li><a href="#" aria-role="button" class="btn btn-primary">Live Site</a></li>
+              <li><a href="#" aria-role="button"  class="btn btn-secondary">View Code</a></li>
+            </div>
+          </div>
+        </div>
+         <div class="project-card">
+          <div class="img-container">
+            <img src="" alt="" />
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Project title FOUR</h3>
+            <p class="project-description">
+              beep bop boop beep bop boop beep bop boop beep bop boop beep bop
+              boop beep bop boop
+            </p>
+            <ul>
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>CSS</li>
+            </ul>
+            <div class="project-links">
+              <li><a href="#" aria-role="button" class="btn btn-primary">Live Site</a></li>
+              <li><a href="#" aria-role="button"  class="btn btn-secondary">View Code</a></li>
+            </div>
+          </div>
+        </div>
 
-      <aside class="socialMedia">
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2 class="sr-only">Skills and tech</h2>
+      <!-- LINE OF WORDS OR LOGOS.   -->
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React</li>
+        <li>Responsive Design</li>
+        <li>Accessibility (a11y)</li>
+        <li>Git & GitHub</li>
+        <li>TailWind</li>
+        <li>TypeScript</li>
+        <li>Vite</li>
+      </ul>
+    </section>
+
+    <!-- NEW SECTION OR BETTER TO BE A FOOTER?  -->
+    <footer class="contact">
+      <h2 class="sr-only">Contact</h2>
+      <p>Let's do this!</p>
+      <!-- obfuscate via js and use svg or emoji for phone and mail icons?  -->
+      <div class="contact-links">
+        <a href="mailto:k.cassidy@outlook.com">Email</a>
+        <a href="">555-555-5555</a>
+      </div>
+    </footer>
+    <!-- END #MAIN -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
+<!-- OLD ASIDE. TO MOVE TO HERO FOR ROLL OVER EFFECT  -->
+<!-- <aside class="socialMedia">
         <div>
-          <h3 class="titleHeader">Find Me</h3>
-          <hr />
           <div class="socialMedia-container">
             <a
               href="https://github.com/ihatetoast"
@@ -70,7 +201,7 @@
               href="https://codepen.io/ihatetoast/"
               target="_blank"
               class="socialMedia-holder codePen"
-                 aria-label="CodePen"
+              aria-label="CodePen"
             >
               <div class="block">
                 <div class="socialMediaPlatform">CodePen</div>
@@ -94,7 +225,7 @@
               href="https://www.linkedin.com/in/cassidykaty/"
               target="_blank"
               class="socialMedia-holder linkedIn"
-                 aria-label="LinkedIn"
+              aria-label="LinkedIn"
             >
               <div class="block">
                 <div class="socialMediaPlatform">LinkedIn</div>
@@ -116,9 +247,4 @@
           </div>
           <div class="clear"></div>
         </div>
-      </aside>
-    </section>
-    <!-- END #MAIN -->
-    <script type="module" src="/src/main.js"></script>
-  </body>
-</html>
+      </aside> -->
