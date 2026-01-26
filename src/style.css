@@ -1,33 +1,39 @@
-/* 
-primary color #4D2B8C rgb(77, 43, 140);
-primary darker #391972 rgb(57,25,114);
-primary darkest #240957 rgb(36,9,87);
-primary lighter #63449B rgb(99, 68, 155);
-primary lightest #856AB6 rgb(133, 106, 182);
 
-secondary color #85409D rgb(133, 64, 157);
-secondary darker #71288C rgb(113, 40, 140);
-secondary darkest #591571 rgb(89, 21, 113);
-secondary lighter #A163B7 rgb(161, 99, 183);
-secondary lightest #C697D7 rgb(198, 151, 215);
-
-secondary2 color #EEA727 rgb(238, 167, 39);
-secondary2 darker #C5830C rgb(197, 131, 12);
-secondary2 darkest #9C6400 rgb(156, 100, 0);
-secondary2 lighter #FDC051 rgb(253, 192, 81);
-secondary2 lightest #FFD07A rgb(255, 208, 122);
-
-accent color #FFEF5F rgb(255, 239, 95);
-accent darker #E7D539 rgb(231, 213, 57);
-accent darkest #C0AF18 rgb(192, 175, 24);
-accent lighter #FFF283 rgb(255, 242, 131);
-accent lightest #FFF7AE rgb(255, 247, 174);
-
- */
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap');
 :root {
   --white: #f5f8fa;
   --black: #0c0c22;
+
+  --primary-color: #4d2b8c;
+  --primary-darker: #391972;
+  --primary-darkest: #240957;
+  --primary-lighter: #63449b;
+  --primary-lightest: #856ab6;
+
+  --secondary-color: #85409d;
+  --secondary-darker: #71288c;
+  --secondary-darkest: #591571;
+  --secondary-lighter: #a163b7;
+  --secondary-lightest: #c697d7;
+
+  --secondary2-color: #eea727;
+  --secondary2-darker: #c5830c;
+  --secondary2-darkest: #9c6400;
+  --secondary2-lighter: #fdc051;
+  --secondary2-lightest: #ffd07a;
+
+  --accent-color: #ffef5f;
+  --accent-darker: #e7d539;
+  --accent-darkest: #c0af18;
+  --accent-lighter: #fff283;
+  --accent-lightest: #fff7ae;
+
+  --serif: 'Lora', 'Georgia', serif;
+  --sans-serif: 'Quicksand', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .sr-only {
@@ -42,9 +48,7 @@ accent lightest #FFF7AE rgb(255, 247, 174);
 }
 
 body {
-  font-family: 'Chivo', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   line-height: 1.5;
-  align-items: center;
 }
 
 .site {
@@ -64,11 +68,16 @@ body {
 h1,
 h2,
 h3 {
-  font-family: 'Asul', 'Georgia', serif;
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-h4 {
-  color: #f5f8fa;
+p,
+a {
+  font-family: var(--sans-serif);
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 a {
@@ -78,27 +87,86 @@ a:hover {
   cursor: pointer;
 }
 
-p {
-  margin: 1em 0.5em;
-}
-
-hr {
-  border-color: #c6b1c7;
-  margin: 1em 0 1.5em 0;
-}
-
 /* HEADER HERO NAV  */
 
-.split-screen-hero {
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 4.2rem;
+  background: var(--primary-color);
+  z-index: 20;
+}
+
+.nav-bar {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  color: #f9f6ee;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav-bar .iht {
+  margin: 0 auto 0 8px;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.iht img {
+  width: 100%;
+}
+
+.iht-logo {
+  background: var(--white);
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  padding: 2px;
+  overflow: hidden;
+  margin-right: 8px;
+}
+
+.iht-logo img {
+  width: 100%;
+}
+
+.hamburger {
+  display: flex;
+}
+
+.menu-links {
+  display: none;
+}
+
+.menu-links a {
+  color: var(--white);
+
+}
+
+.menu-links a:hover {
+  color: var(--secondary2-lighter);
+}
+
+.split-screen-hero {
+  align-items: center;
+  display: flex;
+  gap: 60px;
+  padding: 0 60px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 120px auto;
 }
 
 .profile-image-coin {
   border-radius: 50%;
   margin: 0 auto;
-  margin-top: 10px;
-  height: 200px;
-  width: 200px;
+  height: 400px;
+  width: 400px;
   position: relative;
 }
 
@@ -111,8 +179,7 @@ hr {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  transition:
-    transform 1s;
+  transition: transform 1s;
 }
 
 .profile-image img {
@@ -130,26 +197,31 @@ hr {
 
 .profile-image-coin:hover .profile-image.front {
   transform: rotateY(-180deg);
-
 }
 .profile-image-coin:hover .profile-image.back {
   transform: rotateY(0);
 }
 
-/* NEED FOR ROLLOVER. REFER TO THIS LATER  */
-.socialMedia {
+.details {
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  gap: 30px;
+  padding-right: 60px;
+  width: 60%;
 }
-@media (min-width: 899px) {
-  .socialMedia {
-    flex-basis: 25%;
-  }
+
+.details h1 {
+  color: var(--primary-darkest);
+  font-size: 2.5rem;
 }
-.socialMedia hr {
-  border-width: 1px;
-  text-align: center;
+
+.details p {
+  font-size: 1.25rem;
+}
+
+/* NEED FOR ROLLOVER. REFER TO THIS LATER  */
+.social-links {
+  display: flex;
 }
 
 .icons {
@@ -157,35 +229,14 @@ hr {
   float: left;
 }
 
-.socialMedia-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-@media (min-width: 899px) {
-  .socialMedia-container {
-    flex-direction: column;
-  }
+.social-links-holder {
+  position: relative;
+  height: 2.25em;
+  perspective: 500px;
+  width: 10rem;
 }
 
-.socialMedia-holder {
-  position: relative;
-  display: inline-block;
-  width: 44%;
-  height: 2.25em;
-  margin-top: 0.3em;
-  margin-left: 3%;
-  margin-right: 3%;
-  perspective: 500px;
-}
-@media (min-width: 899px) {
-  .socialMedia-holder {
-    width: 80%;
-  }
-}
-.socialMedia-holder .block {
+.social-links-holder .block {
   position: absolute;
   left: 0;
   top: 0;
@@ -195,8 +246,14 @@ hr {
   transition: all 1s;
   transform: translateZ(-18px);
 }
-.socialMedia-holder .block .socialMediaPlatform,
-.socialMedia-holder .block .socialMediaHandle {
+
+.social-links-handle {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.social-links-holder .block .social-links-platform,
+.social-links-holder .block .social-links-handle {
   position: absolute;
   top: 0;
   left: 0;
@@ -208,92 +265,55 @@ hr {
   color: #f5f8fa;
   transition: background 1s;
 }
-.socialMedia-holder .block .socialMediaPlatform {
+.social-links-holder .block .social-links-platform {
   transform: rotateX(0deg) translateZ(18px);
 }
-.socialMedia-holder .block .socialMediaHandle {
+.social-links-holder .block .social-links-handle {
   transform: rotateX(-90deg) translateZ(18px);
 }
-.socialMedia-holder:hover .block {
+.social-links-holder:hover .block {
   transform: translateZ(-18px) rotateX(90deg);
 }
 
-.socialMedia-holder.twitter .block .socialMediaPlatform,
-.socialMedia-holder.twitter .block .socialMediaHandle {
-  background: #00aced;
-}
-.socialMedia-holder.twitter .block .socialMediaHandle {
-  background: #004f6e;
-}
-.socialMedia-holder.twitter:hover .block .socialMediaHandle {
-  background: #00aced;
-}
-.socialMedia-holder.twitter:hover .block .socialMediaPlatform {
-  background: #6ed7ff;
-}
-.socialMedia-holder.linkedIn .block .socialMediaPlatform,
-.socialMedia-holder.linkedIn .block .socialMediaHandle {
+.social-links-holder.linkedIn .block .social-links-platform,
+.social-links-holder.linkedIn .block .social-links-handle {
   background: #007bb5;
 }
-.socialMedia-holder.linkedIn .block .socialMediaHandle {
+.social-links-holder.linkedIn .block .social-links-handle {
   background: #002436;
 }
-.socialMedia-holder.linkedIn:hover .block .socialMediaHandle {
+.social-links-holder.linkedIn:hover .block .social-links-handle {
   background: #007bb5;
 }
-.socialMedia-holder.linkedIn:hover .block .socialMediaPlatform {
+.social-links-holder.linkedIn:hover .block .social-links-platform {
   background: #36beff;
 }
-.socialMedia-holder.wordPress .block .socialMediaPlatform,
-.socialMedia-holder.wordPress .block .socialMediaHandle {
-  background: #21759b;
-}
-.socialMedia-holder.wordPress .block .socialMediaHandle {
-  background: #0b2632;
-}
-.socialMedia-holder.wordPress:hover .block .socialMediaHandle {
-  background: #21759b;
-}
-.socialMedia-holder.wordPress:hover .block .socialMediaPlatform {
-  background: #5fb6dd;
-}
-.socialMedia-holder.gitHub .block .socialMediaPlatform,
-.socialMedia-holder.gitHub .block .socialMediaHandle {
+
+.social-links-holder.gitHub .block .social-links-platform,
+.social-links-holder.gitHub .block .social-links-handle {
   background: #787878;
 }
-.socialMedia-holder.gitHub .block .socialMediaHandle {
+.social-links-holder.gitHub .block .social-links-handle {
   background: #383838;
 }
-.socialMedia-holder.gitHub:hover .block .socialMediaHandle {
+.social-links-holder.gitHub:hover .block .social-links-handle {
   background: #787878;
 }
-.socialMedia-holder.gitHub:hover .block .socialMediaPlatform {
+.social-links-holder.gitHub:hover .block .social-links-platform {
   background: #b8b8b8;
 }
-.socialMedia-holder.dribbble .block .socialMediaPlatform,
-.socialMedia-holder.dribbble .block .socialMediaHandle {
-  background: #ea4c89;
-}
-.socialMedia-holder.dribbble .block .socialMediaHandle {
-  background: #a3134b;
-}
-.socialMedia-holder.dribbble:hover .block .socialMediaHandle {
-  background: #ea4c89;
-}
-.socialMedia-holder.dribbble:hover .block .socialMediaPlatform {
-  background: #f7bed4;
-}
-.socialMedia-holder.codePen .block .socialMediaPlatform,
-.socialMedia-holder.codePen .block .socialMediaHandle {
+
+.social-links-holder.codePen .block .social-links-platform,
+.social-links-holder.codePen .block .social-links-handle {
   background: #191919;
 }
-.socialMedia-holder.codePen .block .socialMediaHandle {
+.social-links-holder.codePen .block .social-links-handle {
   background: black;
 }
-.socialMedia-holder.codePen:hover .block .socialMediaHandle {
+.social-links-holder.codePen:hover .block .social-links-handle {
   background: #191919;
 }
-.socialMedia-holder.codePen:hover .block .socialMediaPlatform {
+.social-links-holder.codePen:hover .block .social-links-platform {
   background: #595959;
 }
 
@@ -316,4 +336,18 @@ hr {
 }
 .projectLinks ul li a {
   color: #652e67;
+}
+
+@media screen and (min-width: 820px) {
+  .hamburger {
+    display: none;
+  }
+  .menu-links {
+    font-size: 1.4rem;
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
