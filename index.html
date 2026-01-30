@@ -1,51 +1,723 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Katy Cassidy's portfolio as IHateToast."
+    />
+    <meta name="author" content="Katy Cassidy | ihatetoast" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Katy Cassidy: portfolio</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Katy Cassidy's UI, frontend, and fullstack portfolio as IHateToast.">
-  <meta name="author" content="Katy Cassidy | ihatetoast">
-  <title>Katy Cassidy</title>
-  <link href="https://fonts.googleapis.com/css?family=Asul|Chivo" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles/reset.css">
-  <link rel="stylesheet" href="./assets/styles/style.css">
-  <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
-</head>
-<script src="https://use.fontawesome.com/9ea2d86206.js"></script>
-
-<body class='site'>
-  <header>
-    <div class="content-header">
-      <div class="brand">
-        <div class="name">
-          <h1>Katy
-            <div id="ihtlogo">
-              <img src="./assets/images/ihtLogo.png" alt="greyhound eating toast">
-            </div>
-            Cassidy</h1>
+  <body class="site">
+    <header>
+      <nav class="nav-bar">
+        <p class="iht">
+          <span class="iht-logo"
+            ><img
+              src="/images/iht-logo.png"
+              alt="greyhound sitting up eating toast" /></span
+          >ihatetoast
+        </p>
+        <!-- hamburger  -->
+        <a href="#" id="hamburger-link" class="hamburger">
+          <span class="bar"> </span>
+          <span class="bar"> </span>
+          <span class="bar"></span>
+        </a>
+        <ul class="menu-links" id="menu-links">
+          <li class="menu-link"><a href="#featured-projects">projects</a></li>
+          <li class="menu-link"><a href="#about">about</a></li>
+          <li class="menu-link"><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="split-screen-hero">
+      <div class="profile-image-coin">
+        <div class="profile-image front">
+          <img
+            src="/images/little-katy-big-tex.jpg"
+            alt="A woman in front of Big Tex holding a corny dog like a torch"
+          />
+        </div>
+        <div class="profile-image back">
+          <img
+            src="/images/stormtrooper-sammich.jpg"
+            alt="Portrait (photo) of a woman"
+          />
         </div>
       </div>
-    </div>
-  </header>
 
-  <section class="main site-content">
-<p>Currently under construction. </p>
+      <!-- left two images as a circle. flip on hover  -->
+      <div class="details">
+        <h1>
+          Katy Cassidy <br class="title-break" /><span class="title-pipe"
+            >|</span
+          >
+          Frontend Developer
+        </h1>
+        <p class="subtitle">
+          I build accessible React components and occasionally sneak German
+          language lessons or plug greyhound adoption into my side projects. 6+
+          years building things people actually use for companies in the social
+          media, fin-tech, and marketing industries. Always building; always
+          learning.
+        </p>
+        <nav class="social-icons">
+          <a
+            href="https://github.com/ihatetoast"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://codepen.io/ihatetoast/"
+            target="_blank"
+            aria-label="CodePen"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M24 8.182l-.018-.087-.017-.05c-.01-.024-.018-.05-.03-.075-.003-.018-.015-.034-.02-.05l-.035-.067-.03-.05-.044-.06-.046-.045-.06-.045-.046-.03-.06-.044-.044-.04-.015-.02L12.58.19c-.347-.232-.796-.232-1.142 0L.453 7.502l-.015.015-.044.035-.06.05-.038.04-.05.056-.037.045-.05.06c-.02.017-.03.03-.03.046l-.05.06-.02.06c-.02.01-.02.04-.03.07l-.01.05C0 8.12 0 8.15 0 8.18v7.497c0 .044.003.09.01.135l.01.046c.005.03.01.06.02.086l.015.05c.01.027.016.053.027.075l.022.05c0 .01.015.04.03.06l.03.04c.015.01.03.04.045.06l.03.04.04.04c.01.013.01.03.03.03l.06.042.04.03.01.014 10.97 7.33c.164.12.375.163.57.163s.39-.06.57-.18l10.99-7.28.014-.01.046-.037.06-.043.048-.036.052-.058.033-.045.04-.06.03-.05.03-.07.016-.052.03-.077.015-.045.03-.08v-7.5c0-.05 0-.095-.016-.14l-.014-.045.044.003zm-11.99 6.28l-3.65-2.44 3.65-2.442 3.65 2.44-3.65 2.44zm-1.034-6.674l-4.473 2.99L2.89 8.362l8.086-5.39V7.79zm-6.33 4.233l-2.582 1.73V10.3l2.582 1.726zm1.857 1.25l4.473 2.99v4.82L2.89 15.69l3.618-2.417v-.004zm6.537 2.99l4.474-2.98 3.613 2.42-8.087 5.39v-4.82zm6.33-4.23l2.583-1.72v3.456l-2.583-1.73zm-1.855-1.24L13.042 7.8V2.97l8.085 5.39-3.612 2.415v.003z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/cassidykaty/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+          </a>
+        </nav>
+        <nav class="social-links" aria-label="Social media">
+          <a
+            href="https://github.com/ihatetoast"
+            target="_blank"
+            aria-label="GitHub"
+            class="social-links-holder gitHub"
+          >
+            <div class="block">
+              <div class="social-links-platform">GitHub</div>
+              <div class="social-links-handle">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+                <span>ihatetoast</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://codepen.io/ihatetoast/"
+            target="_blank"
+            aria-label="CodePen"
+            class="social-links-holder codePen"
+          >
+            <div class="block">
+              <div class="social-links-platform">CodePen</div>
+              <div class="social-links-handle">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M24 8.182l-.018-.087-.017-.05c-.01-.024-.018-.05-.03-.075-.003-.018-.015-.034-.02-.05l-.035-.067-.03-.05-.044-.06-.046-.045-.06-.045-.046-.03-.06-.044-.044-.04-.015-.02L12.58.19c-.347-.232-.796-.232-1.142 0L.453 7.502l-.015.015-.044.035-.06.05-.038.04-.05.056-.037.045-.05.06c-.02.017-.03.03-.03.046l-.05.06-.02.06c-.02.01-.02.04-.03.07l-.01.05C0 8.12 0 8.15 0 8.18v7.497c0 .044.003.09.01.135l.01.046c.005.03.01.06.02.086l.015.05c.01.027.016.053.027.075l.022.05c0 .01.015.04.03.06l.03.04c.015.01.03.04.045.06l.03.04.04.04c.01.013.01.03.03.03l.06.042.04.03.01.014 10.97 7.33c.164.12.375.163.57.163s.39-.06.57-.18l10.99-7.28.014-.01.046-.037.06-.043.048-.036.052-.058.033-.045.04-.06.03-.05.03-.07.016-.052.03-.077.015-.045.03-.08v-7.5c0-.05 0-.095-.016-.14l-.014-.045.044.003zm-11.99 6.28l-3.65-2.44 3.65-2.442 3.65 2.44-3.65 2.44zm-1.034-6.674l-4.473 2.99L2.89 8.362l8.086-5.39V7.79zm-6.33 4.233l-2.582 1.73V10.3l2.582 1.726zm1.857 1.25l4.473 2.99v4.82L2.89 15.69l3.618-2.417v-.004zm6.537 2.99l4.474-2.98 3.613 2.42-8.087 5.39v-4.82zm6.33-4.23l2.583-1.72v3.456l-2.583-1.73zm-1.855-1.24L13.042 7.8V2.97l8.085 5.39-3.612 2.415v.003z"
+                  />
+                </svg>
+                <span>ihatetoast</span>
+              </div>
+            </div></a
+          >
+          <a
+            href="https://www.linkedin.com/in/cassidykaty/"
+            target="_blank"
+            aria-label="LinkedIn"
+            class="social-links-holder linkedIn"
+          >
+            <div class="block">
+              <div class="social-links-platform">LinkedIn</div>
+              <div class="social-links-handle">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+                <span>ihatetoast</span>
+              </div>
+            </div>
+          </a>
+        </nav>
+      </div>
+    </section>
 
-<p>GitHub main page <a href="https://github.com/ihatetoast" target="_blank" rel="noreferrer"
->is updated.</a></p>
+    <a class="section-anchor" id="featured-projects"></a>
 
-<p>Why is this taking so long? I'm building other things. These things take time. Do you think <a href="https://en.wikipedia.org/wiki/Lazbuddie,_Texas" target="_blank" rel="noreferrer"
->Lazbuddie, TX,</a> was built in a day?</p>
+    <!-- PROJECTS SECTION  -->
+    <section class="featured-projects">
+      <h2 class="sr-only">Featured Projects</h2>
+      <div class="project-grid">
+        <!-- FIRST PROJECT  -->
+        <div class="project-card">
+          <div data-project="greyhound-table" class="img-container">
+            <img
+              src="/images/dog-data-acc.png"
+              alt="table of dog data with one row opened to show details of one dog"
+            />
+            <video
+              data-project="greyhound-table"
+              class="project-video"
+              muted
+              autoplay
+              loop
+              playsinline
+            >
+              <source src="/images/dog-data.mp4" type="video/mp4" />
+            </video>
+            <button class="video-toggle" aria-label="Play demo button">
+              ► Demo
+            </button>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Greyhound Data Table</h3>
+            <p class="project-description">
+              Greyhound data displayed as a table with rows that either open as
+              an accordion or trigger a modal with filtering and sorting
+              functionality.
+            </p>
+            <ul class="skills-list">
+              <li class="skill-item">HTML / CSS</li>
+              <li class="skill-item">React</li>
+              <li class="skill-item">Vite</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://www.ihatetoast.com/available-hound-data-table/"
+                target="_blank"
+                rel="noreferrer"
+                class="btn btn-primary"
+                >Live Site</a
+              >
+              <a
+                href="https://github.com/ihatetoast/available-hound-data-table"
+                target="_blank"
+                rel="noreferrer"
+                class="btn btn-secondary"
+                >View Code</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- SECOND PROJECT  -->
+        <div class="project-card">
+          <div class="img-container" data-project="germany-trivia">
+            <img
+              src="/images/ger-trivia.png"
+              alt="result of quiz showing bar graph and map of Germany"
+            />
+            <video
+              class="project-video"
+              data-project="germany-trivia"
+              muted
+              autoplay
+              loop
+              playsinline
+            >
+              <source src="/images/german-trivia-app.mp4" type="video/mp4" />
+            </video>
+            <button class="video-toggle" aria-label="Play demo button"></button>
+          </div>
 
+          <div class="project-details">
+            <h3 class="project-title">German Trivia App</h3>
+            <p class="project-description">
+              A trivia app in which the player chooses a topic to test their
+              knowledge on. A custom Bierstein timer shows how much time is
+              left. Results displayed as a flag bar graph.
+            </p>
+            <ul class="skills-list">
+              <li class="skill-item">HTML / CSS</li>
+              <li class="skill-item">React</li>
+              <li class="skill-item">Vite</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://www.ihatetoast.com/germany-trivia-quiz/"
+                target="_blank"
+                rel="noreferrer"
+                class="btn btn-primary"
+                >Live Site</a
+              >
+              <a
+                href="https://github.com/ihatetoast/germany-trivia-quiz"
+                target="_blank"
+                rel="noreferrer"
+                class="btn btn-secondary"
+                >View Code</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- THIRD PROJECT  -->
+        <div class="project-card">
+          <div class="img-container" data-project="shuggapuss">
+            <img src="/images/shuggapuss.png" alt="pictures of cats" />
+            <video
+              class="project-video"
+              data-project="shuggapuss"
+              muted
+              autoplay
+              loop
+              playsinline
+            >
+              <source src="/images/shuggapuss.mp4" type="video/mp4" />
+            </video>
+              <button class="video-toggle" aria-label="Play demo button"></button>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Meowr-Shuggapuss</h3>
+            <p class="project-description">
+              Cat dating app to hiss or pspsps to favourite and review
+              favourited cats using the Cat API, Material UI, and Local Storage.
+            </p>
+            <ul class="skills-list">
+              <li class="skill-item">React</li>
+              <li class="skill-item">TypeScript</li>
+              <li class="skill-item">CSS</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="http://www.ihatetoast.com/meowr-shuggapuss/"
+                target="_blank"
+                rel="noreferrer"
+                class="btn btn-primary"
+                >Live Site</a
+              >
+              <a
+                href="https://github.com/ihatetoast/meowr-shuggapuss"
+                target="_blank"
+                rel="noreferrer"
+                class="btn btn-secondary"
+                >View Code</a
+              >
+            </div>
+          </div>
+        </div>
 
+        <!-- FOURTH PROJECT  -->
 
+        <div class="project-card">
+          <div class="img-container" data-project="hangdog">
+            <img
+              src="/images/hangdog-game.png"
+              alt="hangman game with typewriter keys"
+            />
+            <video
+              data-project="hangdog"
+              class="project-video"
+              muted
+              autoplay
+              loop
+              playsinline
+            >
+              <source src="/images/hangdog.mp4" type="video/mp4" />
+            </video>
+            <button class="video-toggle" aria-label="Play demo button">
+              ► Demo
+            </button>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Hangdog</h3>
+            <p class="project-description">
+              A hangman app that pulls breed data from the Dog API after the
+            </p>
+            <ul class="skills-list">
+              <li class="skill-item">HTML / CSS</li>
+              <li class="skill-item">React</li>
+              <li class="skill-item">Vite</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="http://www.ihatetoast.com/hangdog/"
+                target="_blank"
+                rel="noreferrer"
+                class="btn btn-primary"
+                >Live Site</a
+              >
 
-  </section>
-  <!-- END #MAIN -->
-  <footer>
-    <p>Katy Cassidy | ihatetoast </p>
-  </footer>
-</body>
+              <a
+                href="https://github.com/ihatetoast/hangdog"
+                target="_blank"
+                rel="noreferrer"
+                class="btn btn-secondary"
+                >View Code</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <a class="section-anchor" id="about"></a>
+        <!-- ABOUT  -->
+    <section id="about" class="about">
+      <h2 class="sr-only">About me</h2>
+
+      <div class="about-tabs">
+        <div class="tab-container">
+          <div class="tab-buttons">
+            <button class="tab-btn dev active" data-tab="developer">
+              <div><span>Katy the dev</span></div>
+            </button>
+            <button class="tab-btn person" data-tab="person">
+              <div><span>Katy the person</span></div>
+            </button>
+          </div>
+
+          <div class="tab-content dev active" id="developer">
+            <div class="tab-content-inner">
+              <div class="tab-content-text">
+                <p>
+                  I'm a creative frontend developer who loves building
+                  interactive React apps that solve real problems, from teaching
+                  German to helping greyhounds find homes. I build with
+                  accessibility&mdash;why limit our audience? My 4.5 years
+                  working for Meta and Bank of America taught me that clean
+                  code, good documentation, and regression testing are your
+                  friends.
+                </p>
+                <div class="tech-icons">
+                  <span>
+                    <svg
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      fill="none"
+                      viewBox="0 0 100 100"
+                    >
+                      <path
+                        fill="#e44d26"
+                        d="M14.021 90.034 6 0h88.187l-8.022 89.985L50.02 100"
+                      />
+                      <path
+                        fill="#f16529"
+                        d="M50.093 92.344V7.39h36.048l-6.88 76.811"
+                      />
+                      <path
+                        fill="#ebebeb"
+                        d="M22.383 18.4h27.71v11.036H34.488L35.51 40.74h14.584v11.01H25.397zm3.5 38.893h11.084l.778 8.823 12.348 3.306v11.521l-22.654-6.32"
+                      />
+                      <path
+                        fill="#fff"
+                        d="M77.706 18.4H50.044v11.036h26.64zm-2.018 22.34H50.044v11.035h13.612l-1.288 14.341-12.324 3.306v11.473l22.606-6.271"
+                      />
+                    </svg>
+                    <span class="sr-only">HTML5</span>
+                  </span>
+                  <span>
+                    <svg
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      fill="none"
+                      viewBox="0 0 100 100"
+                    >
+                      <path
+                        fill="#264de4"
+                        d="m94.175 0-8.033 89.99L50.034 100l-36.01-9.996L6 0z"
+                      />
+                      <path
+                        fill="#2965f1"
+                        d="m79.265 84.26 6.864-76.9H50.087v84.988z"
+                      />
+                      <path
+                        fill="#ebebeb"
+                        d="m24.396 40.74.99 11.039h24.702V40.74zm25.692-22.342h-27.68l1.003 11.038h26.676zm-.001 62.495V69.408l-.048.013-12.294-3.32-.786-8.803H25.878l1.547 17.332 22.612 6.277z"
+                      />
+                      <path
+                        fill="#fff"
+                        d="m63.642 51.779-1.281 14.316-12.312 3.323v11.484l22.63-6.272.166-1.865 2.594-29.06.27-2.965L77.7 18.398H50.05v11.038h15.555L64.599 40.74H50.05v11.04z"
+                      />
+                    </svg>
+                    <span class="sr-only">CSS3</span>
+                  </span>
+                  <span>
+                    <svg
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      fill="none"
+                      viewBox="0 0 100 100"
+                    >
+                      <g clip-path="url(#a)">
+                        <path fill="#f7df1e" d="M100 0H0v100h100z" />
+                        <path
+                          fill="#000"
+                          d="M67.175 78.125c2.014 3.29 4.635 5.707 9.27 5.707 3.893 0 6.38-1.946 6.38-4.635 0-3.222-2.555-4.364-6.84-6.238l-2.35-1.008c-6.781-2.89-11.286-6.508-11.286-14.159 0-7.047 5.37-12.413 13.762-12.413 5.975 0 10.27 2.08 13.365 7.524l-7.317 4.699c-1.611-2.89-3.35-4.027-6.048-4.027-2.752 0-4.497 1.746-4.497 4.027 0 2.819 1.746 3.96 5.778 5.706l2.35 1.006c7.983 3.424 12.491 6.915 12.491 14.762 0 8.46-6.646 13.096-15.571 13.096-8.727 0-14.365-4.16-17.124-9.61zm-33.196.815c1.477 2.619 2.82 4.833 6.048 4.833 3.087 0 5.035-1.208 5.035-5.905V45.916h9.397v32.08c0 9.73-5.705 14.158-14.032 14.158-7.524 0-11.881-3.894-14.097-8.583z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h100v100H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="sr-only">JavaScript</span>
+                  </span>
+                  <span>
+                    <svg
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      fill="none"
+                      viewBox="0 0 100 100"
+                    >
+                      <g clip-path="url(#a)">
+                        <path
+                          fill="#61dafb"
+                          d="M50.307 58.816a8.816 8.816 0 1 0 0-17.632 8.816 8.816 0 0 0 0 17.632"
+                        />
+                        <path
+                          stroke="#61dafb"
+                          stroke-width="5"
+                          d="M50.307 68.063c26.126 0 47.306-8.087 47.306-18.063s-21.18-18.062-47.306-18.062C24.18 31.938 3 40.024 3 50s21.18 18.063 47.307 18.063Z"
+                        />
+                        <path
+                          stroke="#61dafb"
+                          stroke-width="5"
+                          d="M34.664 59.031C47.727 81.658 65.321 95.957 73.96 90.97c8.64-4.988 5.053-27.374-8.01-50C52.885 18.342 35.291 4.043 26.652 9.03s-5.052 27.374 8.011 50Z"
+                        />
+                        <path
+                          stroke="#61dafb"
+                          stroke-width="5"
+                          d="M34.664 40.969c-13.063 22.626-16.65 45.012-8.01 50 8.638 4.988 26.232-9.311 39.295-31.938s16.65-45.012 8.01-50c-8.638-4.988-26.232 9.311-39.295 31.938Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h100v100H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="sr-only">React</span>
+                  </span>
+                  <span>
+                    <svg
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      fill="none"
+                      viewBox="0 0 100 100"
+                    >
+                      <g clip-path="url(#a)">
+                        <path
+                          fill="#de4c36"
+                          d="M98.114 45.544 54.454 1.886a6.44 6.44 0 0 0-9.108 0l-9.066 9.066 11.5 11.501a7.65 7.65 0 0 1 7.869 1.834 7.66 7.66 0 0 1 1.817 7.916L68.55 43.287c2.682-.923 5.776-.326 7.918 1.82a7.66 7.66 0 0 1 0 10.836 7.662 7.662 0 0 1-12.508-8.335L53.623 37.271v27.202a7.663 7.663 0 0 1 2.026 12.288 7.66 7.66 0 0 1-10.836 0 7.663 7.663 0 0 1 2.508-12.51V36.795a7.6 7.6 0 0 1-2.508-1.672 7.66 7.66 0 0 1-1.651-8.377l-11.338-11.34L1.887 45.344a6.44 6.44 0 0 0 0 9.11l43.661 43.659a6.44 6.44 0 0 0 9.108 0l43.458-43.457a6.444 6.444 0 0 0 0-9.11"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h100v100H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="sr-only">Git</span>
+                  </span>
+
+                  <span>
+                    <svg
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      fill="none"
+                      viewBox="0 0 100 100"
+                    >
+                      <path
+                        fill="#161614"
+                        d="M50 1C22.39 1 0 23.386 0 51c0 22.092 14.327 40.834 34.193 47.446 2.499.462 3.417-1.085 3.417-2.406 0-1.192-.047-5.131-.068-9.309-13.91 3.025-16.846-5.9-16.846-5.9-2.274-5.779-5.551-7.315-5.551-7.315-4.537-3.104.341-3.04.341-3.04 5.022.353 7.665 5.153 7.665 5.153 4.46 7.644 11.697 5.434 14.55 4.156.449-3.232 1.745-5.437 3.175-6.686-11.106-1.264-22.78-5.552-22.78-24.71 0-5.459 1.953-9.92 5.151-13.42-.519-1.26-2.23-6.346.485-13.233 0 0 4.198-1.344 13.753 5.125 3.988-1.108 8.266-1.663 12.515-1.682 4.25.019 8.53.574 12.526 1.682 9.544-6.469 13.736-5.125 13.736-5.125 2.722 6.887 1.01 11.973.49 13.232 3.206 3.502 5.146 7.962 5.146 13.42 0 19.205-11.697 23.434-22.83 24.671 1.793 1.552 3.391 4.595 3.391 9.26 0 6.69-.058 12.074-.058 13.721 0 1.33.9 2.89 3.435 2.399C85.692 91.819 100 73.085 100 51c0-27.614-22.386-50-50-50"
+                      />
+                      <path
+                        fill="#161614"
+                        d="M18.727 72.227c-.11.248-.502.322-.857.152-.363-.163-.567-.502-.45-.751.109-.256.5-.327.862-.156.363.163.57.505.445.755m2.46 2.194c-.24.221-.706.118-1.022-.231-.327-.349-.388-.814-.146-1.04.246-.22.698-.117 1.026.232.327.353.39.816.14 1.04zm1.687 2.808c-.307.213-.808.013-1.118-.432-.306-.444-.306-.977.007-1.191.31-.214.804-.021 1.118.42.305.452.305.985-.008 1.203m2.853 3.252c-.274.302-.858.22-1.285-.192-.437-.403-.56-.975-.284-1.277.277-.303.864-.218 1.295.191.434.403.566.979.274 1.278m3.688 1.098c-.12.391-.683.57-1.25.403-.565-.171-.935-.63-.821-1.026.118-.394.682-.58 1.253-.401.565.17.936.625.818 1.024m4.197.465c.014.413-.466.755-1.06.762-.599.013-1.082-.32-1.088-.726 0-.416.469-.755 1.067-.765.594-.012 1.081.32 1.081.73m4.123-.158c.071.403-.342.816-.932.926-.58.106-1.118-.143-1.192-.541-.072-.413.35-.826.928-.933.592-.103 1.12.14 1.196.548"
+                      />
+                    </svg>
+                    <span class="sr-only">GitHub</span>
+                  </span>
+
+                  <span>
+                    <svg
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      fill="none"
+                      viewBox="0 0 100 100"
+                    >
+                      <g clip-path="url(#a)">
+                        <path
+                          fill="#06b6d4"
+                          d="M50 20q-20 0-25 19.994 7.5-9.997 17.5-7.498c3.804.95 6.522 3.71 9.532 6.764 4.902 4.974 10.576 10.731 22.969 10.731q20 0 24.999-19.995-7.5 9.997-17.5 7.5c-3.803-.951-6.521-3.71-9.531-6.765C68.067 25.758 62.392 20 50 20M25 49.991q-20 0-25 19.995 7.5-9.998 17.5-7.498c3.803.952 6.522 3.71 9.532 6.763C31.933 74.225 37.608 79.984 50 79.984q20 0 25-19.995-7.5 9.997-17.5 7.498c-3.803-.95-6.522-3.71-9.532-6.763C43.066 55.75 37.393 49.991 25 49.991"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h100v100H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="sr-only">TailwindCSS</span>
+                  </span>
+                  <span>
+                    <svg
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      fill="none"
+                      viewBox="0 0 100 100"
+                    >
+                      <g clip-path="url(#a)">
+                        <path fill="#017acb" d="M0 0h100v100H0z" />
+                        <path
+                          fill="#fff"
+                          d="M48.016 37.031h4.797v8.282h-12.97v36.843l-.343.094c-.469.125-6.64.125-7.969-.016l-1.062-.093V45.312H17.5v-8.28l4.11-.048c2.25-.03 8.03-.03 12.843 0 4.813.032 10.906.047 13.563.047m36.61 41.219c-1.907 2.016-3.954 3.14-7.36 4.063-1.485.406-1.735.421-5.078.406-3.344-.016-3.61-.016-5.235-.438-4.203-1.078-7.594-3.187-9.906-6.172-.656-.843-1.734-2.593-1.734-2.812 0-.063.156-.203.359-.297s.625-.36.969-.562c.343-.204.968-.579 1.39-.797.422-.22 1.64-.938 2.703-1.579 1.063-.64 2.032-1.156 2.141-1.156.11 0 .313.219.469.485.937 1.578 3.125 3.593 4.672 4.28.953.407 3.062.86 4.078.86.937 0 2.656-.406 3.578-.828.984-.453 1.484-.906 2.078-1.812.406-.641.453-.813.438-2.032 0-1.125-.063-1.437-.375-1.953-.875-1.437-2.063-2.187-6.875-4.312-4.97-2.203-7.204-3.516-9.016-5.282-1.344-1.312-1.61-1.67-2.453-3.312-1.094-2.11-1.235-2.797-1.25-5.937-.016-2.204.031-2.922.265-3.672.329-1.125 1.391-3.297 1.875-3.844 1-1.172 1.36-1.531 2.063-2.11 2.125-1.75 5.438-2.906 8.61-3.015.359 0 1.546.062 2.656.14 3.187.266 5.359 1.047 7.453 2.72 1.578 1.25 3.968 4.187 3.734 4.577-.156.235-6.39 4.391-6.797 4.516-.25.078-.422-.016-.765-.422-2.125-2.547-2.985-3.094-5.047-3.219-1.469-.093-2.25.078-3.235.735-1.03.687-1.53 1.734-1.53 3.187.015 2.125.827 3.125 3.827 4.61 1.938.953 3.594 1.734 3.719 1.734.188 0 4.203 2 5.25 2.625 4.875 2.86 6.86 5.797 7.375 10.86.375 3.812-.703 7.296-3.047 9.765"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h100v100H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="sr-only">TypeScript</span>
+                  </span>
+                  <span>
+                    <svg
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      fill="none"
+                      viewBox="0 0 100 100"
+                    >
+                      <g clip-path="url(#a)">
+                        <path
+                          fill="url(#b)"
+                          d="M98.848 14.801 52.731 98.695a2.486 2.486 0 0 1-4.365.019L1.336 14.808c-1.054-1.878.525-4.153 2.617-3.773L50.12 19.43c.294.053.596.053.89-.002l45.2-8.381c2.086-.387 3.672 1.871 2.638 3.753"
+                        />
+                        <path
+                          fill="url(#c)"
+                          d="M72.11.025 37.985 6.828c-.273.054-.52.2-.703.412a1.3 1.3 0 0 0-.308.764l-2.099 36.07a1.3 1.3 0 0 0 .442 1.05 1.25 1.25 0 0 0 1.091.268l9.502-2.23c.889-.21 1.692.587 1.51 1.496l-2.824 14.064c-.19.946.684 1.755 1.592 1.474l5.869-1.813c.91-.281 1.784.53 1.591 1.477l-4.486 22.09c-.28 1.382 1.526 2.135 2.28.951l.503-.791 27.809-56.46c.466-.946-.337-2.024-1.358-1.823l-9.78 1.92c-.92.18-1.701-.69-1.442-1.605l6.384-22.513c.26-.917-.526-1.788-1.446-1.604"
+                        />
+                      </g>
+                      <defs>
+                        <linearGradient
+                          id="b"
+                          x1=".187"
+                          x2="51.038"
+                          y1="17.805"
+                          y2="85.688"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#41d1ff" />
+                          <stop offset="1" stop-color="#bd34fe" />
+                        </linearGradient>
+                        <linearGradient
+                          id="c"
+                          x1="54.398"
+                          x2="64.98"
+                          y1="1.872"
+                          y2="73.224"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#ffea83" />
+                          <stop offset=".083" stop-color="#ffdd35" />
+                          <stop offset="1" stop-color="#ffa800" />
+                        </linearGradient>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h100v100H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="sr-only">Vite</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content person" id="person">
+          <div class="tab-content-inner">
+            <div class="tab-content-text">
+              <p>A developer is what I do, but not who I am.</p>
+              <p>
+                When I am not passing props I can be found on a ballroom all
+                sparkled up head to toe dancing anything from the tango to the
+                cha cha to country western two-step. I volunteer with a local
+                greyhound adoption group helping people find their next hound
+                and getting hounds that are fresh off the track used to living
+                in a house with cats.
+              </p>
+              <p>
+                Other things that keep me out of trouble (mostly) are walks in
+                and around DFW, stabbing and hooking (or embroidery, knitting,
+                and crocheting), and often returning to the keyboard to create
+                apps and pure CSS images for my own entertainment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER  -->
+    <a class="section-anchor" id="contact"></a>
+    <footer class="contact">
+      <h2 class="sr-only">Contact</h2>
+      <p class="footer-heading">Let's take it to elev, ma dev!</p>
+      <div class="contact-links">
+        <p><span class="contact-emoji">✉︎</span> <span id="email"></span></p>
+        <p><span class="contact-emoji">☏</span> <span id="mob"></span></p>
+      </div>
+    </footer>
+    <!-- END #MAIN -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
