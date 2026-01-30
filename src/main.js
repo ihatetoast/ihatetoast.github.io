@@ -35,7 +35,7 @@ imgContainers.forEach(cont => {
         vid.style.opacity = '0';
         vid.pause();
         vid.currentTime = 0;
-        toggleBtn.textContent = '▶ Demo';
+        toggleBtn.textContent = '▶ Demo'; // bug: does not show up
         isPlaying = false;
       } else {
         vid.style.opacity = '1';
@@ -75,3 +75,22 @@ tabBtns.forEach(btn => {
     document.getElementById(btn.dataset.tab).classList.add('active');
   });
 });
+
+
+const hamburger = document.getElementById('hamburger-link');
+const links = document.getElementById('menu-links');
+const linkAnchors = document.querySelectorAll('.menu-link');
+hamburger.addEventListener('click', () => {
+  links.classList.add('active');
+})
+
+linkAnchors.forEach(link => {
+  link.addEventListener('click', () =>{
+    // rem active from links
+    links.classList.remove('active');
+  })
+})
+
+window.addEventListener('resize', () => {
+  links.classList.remove('active');
+})

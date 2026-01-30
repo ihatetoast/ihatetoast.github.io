@@ -69,14 +69,6 @@ section {
   flex-direction: column;
 }
 
-.site-content {
-  flex: 1 0 auto;
-}
-
-.clear {
-  clear: both;
-}
-
 h1,
 h2,
 h3 {
@@ -170,6 +162,28 @@ header {
 
 .menu-links {
   display: none;
+  flex-direction: column;
+  position: relative;
+}
+
+.menu-links.active {
+  display: flex;
+  position: absolute;
+  top: 130%;
+  width: 90%;
+  left: 5%;
+  background: var(--primary-color);
+}
+
+.menu-links.active .menu-link {
+  border-bottom: 2px solid var(--primary-lightest);
+  padding: 1.5rem 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.menu-links.active li a {
+  color: var(--white);
 }
 
 .menu-links a {
@@ -265,11 +279,6 @@ header {
   color: var(--black);
 }
 
-.icons {
-  margin: 0em 0.25em;
-  float: left;
-}
-
 /* PROJECT CARDS  */
 .project-grid {
   margin-top: 1rem;
@@ -319,10 +328,9 @@ header {
   justify-content: space-around;
 }
 
-.project-links a {
+.btn {
   cursor: pointer;
-  background: var(--primary-darkest);
-  color: var(--white);
+
   display: inline-block;
   padding: 0.5rem 0.75rem;
   border-radius: 20px;
@@ -333,15 +341,33 @@ header {
   transition: transform 0.2s ease-in;
 }
 
-.project-links a:hover,
-.project-links a:focus {
-  color: var(--accent-color);
+.btn:hover,
+.btn:focus {
   transform: scale(1.1);
   transition: transform 0.2s ease-in;
 }
 
-.project-asset {
-  width: 290px;
+.btn.btn-primary {
+  background: var(--primary-darkest);
+  border: 1px solid var(--primary-darkest);
+  color: var(--white);
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+  color: var(--accent-color);
+}
+
+.btn.btn-secondary {
+  border: 1px solid var(--primary-darkest);
+  color: var(--primary-darkest);
+  background: var(--white);
+}
+
+.btn.btn-secondary:hover,
+.btn.btn-secondary:active {
+  background: var(--secondary2-color);
+  color: var(--primary-darkest);
 }
 
 .img-container {
@@ -363,7 +389,7 @@ header {
   object-fit: cover;
   top: 30px;
   left: 30px;
-    border-radius: var(--border-radius);
+  border-radius: var(--border-radius);
 }
 
 .img-container[data-project='greyhound-table'] {
@@ -425,6 +451,7 @@ header {
   background: rgba(0, 0, 0, 0.9);
 }
 
+/* ABOUT TABS  */
 .tab-content {
   display: none;
 }
@@ -433,11 +460,187 @@ header {
   display: block;
 }
 
+.tab-buttons {
+  display: flex;
+  margin: 0 1.4rem;
+  gap: 1rem;
+}
+
+.tab-btn {
+  height: 2rem;
+  border: 2px solid var(--secondary-darkest);
+  border-width: 2px 0 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-btn.dev,
+.tab-btn.dev:before,
+.tab-btn.dev:after {
+  background: var(--secondary-color);
+}
+
+.tab-btn.person,
+.tab-btn.person:before,
+.tab-btn.person:after {
+  background: var(--secondary-lightest);
+}
+
+.tab-btn.person {
+  background: var(--secondary-lightest);
+}
+
+.tab-btn.active {
+  z-index: 10;
+  position: relative;
+}
+
+.tab-btn div {
+  padding: 0.2rem;
+}
+
+.tab-btn:before,
+.tab-btn:after {
+  content: '';
+  height: 100%;
+  width: 21px;
+  position: absolute;
+  top: -2px;
+}
+
+.tab-btn:before {
+  border-right: 2px solid var(--secondary-darkest);
+  border-top: 2px solid var(--secondary-darkest);
+  right: -16px;
+  transform: skew(15deg);
+  border-radius: 0 8px 0 0;
+}
+
+.tab-btn:after {
+  top: -2px;
+  border-left: 2px solid var(--secondary-darkest);
+  border-top: 2px solid var(--secondary-darkest);
+  left: -16px;
+  transform: skew(-15deg);
+  border-radius: 8px 0 0 0;
+}
+
+.tab-btn span {
+  display: inline-block;
+  padding: 0.2rem 0.1rem;
+  font-family: var(--sans-serif);
+}
+
+.tab-btn.active span {
+  border: 2px solid var(--secondary-darkest);
+  background: var(--white);
+
+  border-radius: var(--border-radius);
+}
+
+.tab-content {
+  border: 2px solid var(--secondary-darkest);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  position: relative;
+  top: -2px;
+}
+
+.tab-content.dev {
+  background: var(--secondary-color);
+}
+.tab-content.person {
+  background: var(--secondary-lightest);
+}
+
+.tab-content-text p {
+  margin-bottom: 0.5rem;
+}
+
+.tab-content-text {
+  background: var(--white);
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  height: 500px;
+}
+
+.tab-content-text p {
+  line-height: 1.2;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+footer {
+  background: var(--secondary2-lightest);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-heading {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+footer .contact-links {
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-links p {
+  display: inline-block;
+  background: var(--primary-darker);
+  border-radius: 50px;
+  padding: 0.25rem 0.5rem;
+}
+
+.contact-links p,
+.contact-links a {
+  color: var(--accent-color);
+}
+
+@media screen and (min-width: 390px) {
+  .tab-content-text {
+    height: 420px;
+  }
+  .tab-content-text p {
+    line-height: 1.5;
+  }
+}
+
 @media screen and (min-width: 475px) {
   section {
     padding: 0 3rem;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .tab-content-text {
+    height: 280px;
+  }
+  .tab-content-text p {
+    line-height: 1.5;
+  }
+
+  footer .contact-links {
+    flex-direction: row;
+    gap: 1rem;
+    margin: 1rem auto;
+  }
+  .contact-links p {
+    padding: 0.5rem 1rem;
+  }
+}
+
 /*  CHANGE TO FLEX ROW  */
 @media screen and (min-width: 820px) {
   header {
@@ -527,20 +730,28 @@ header {
     left: 50px;
   }
 
+  .project-links {
+    gap: 1rem;
+  }
+
   .project-card:nth-child(odd) .project-links {
     justify-content: flex-end;
   }
 
-   .project-card:nth-child(even) .project-links {
+  .project-card:nth-child(even) .project-links {
     justify-content: flex-start;
   }
 
-.project-links a:hover,
-.project-links a:focus {
-  color: var(--accent-color);
-  transform: scale(1.2);
-  transition: transform 0.2s ease-in;
-}
+  .btn:hover,
+  .btn:focus {
+    color: var(--accent-color);
+    transform: scale(1.15);
+    transition: transform 0.2s ease-in;
+  }
+
+  .tab-buttons {
+    margin: 0 2rem;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -659,12 +870,21 @@ header {
   .social-links-holder.codePen:hover .block .social-links-platform {
     background: #595959;
   }
+
+  .about-tabs {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  .tab-buttons {
+    margin: 0 2.5rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   section {
     margin: 0px auto;
-    padding: 0 60px;
+    padding: 3rem 5rem;
   }
 
   .profile-image-coin {
