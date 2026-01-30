@@ -29,8 +29,12 @@
 
   --serif: 'Lora', 'Georgia', serif;
   --sans-serif: 'Quicksand', sans-serif;
-}
 
+  --border-radius: 5px;
+}
+* {
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -181,7 +185,7 @@ header {
   display: flex;
   flex-direction: column-reverse;
   gap: 10px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .profile-image-coin {
@@ -266,55 +270,175 @@ header {
   float: left;
 }
 
-.projectDesc {
-  flex: 1;
-}
-
-.projectLinks {
-  color: #652e67;
-  font-size: 1em;
-}
-.projectLinks ul {
-  display: flex;
-  justify-content: space-between;
-}
-.projectLinks ul li {
-  font-size: 1.2em;
-  margin-right: 5%;
-  margin-left: 5%;
-}
-.projectLinks ul li a {
-  color: #652e67;
-}
-
 /* PROJECT CARDS  */
+.project-grid {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
 .project-card {
   display: flex;
   flex-direction: column;
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 11px -5px var(--secondary-darkest);
+  position: relative;
+}
+
+.project-details {
+  text-align: center;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.skills-list {
+  margin: 1rem auto;
+  font-size: 0.9rem;
+  color: var(--primary-darkest);
+}
+
+.skill-item {
+  display: inline;
+  font-weight: 600;
+  font-family: var(--sans-serif);
+}
+
+.skill-item:not(:last-child)::after {
+  content: ' ~ ';
+  color: var(--secondary2-color);
+  font-weight: 700;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-links a {
+  cursor: pointer;
+  background: var(--primary-darkest);
+  color: var(--white);
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  width: 7rem;
+  text-align: center;
+  font-family: var(--sans-serif);
+  font-weight: 700;
+  transition: transform 0.2s ease-in;
+}
+
+.project-links a:hover,
+.project-links a:focus {
+  color: var(--accent-color);
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in;
+}
+
+.project-asset {
+  width: 290px;
 }
 
 .img-container {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
+  flex: 0 0 320px;
+  height: 320px;
+  position: relative;
   overflow: hidden;
-}
-.img-container img {
-  width: 100%;
+  border-radius: var(--border-radius);
 }
 
-/* HOVER IMG CONT TO SHOW VID , hover on desk */
-.project-video-container {
+.img-container img,
+.project-video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.img-container img {
+  object-fit: cover;
+  top: 30px;
+  left: 30px;
+    border-radius: var(--border-radius);
+}
+
+.img-container[data-project='greyhound-table'] {
+  background: var(--primary-lightest);
+}
+
+.img-container[data-project='germany-trivia'] {
+  background: var(--accent-darkest);
+}
+
+.img-container[data-project='shuggapuss'] {
+  background: var(--secondary-darkest);
+}
+
+.img-container[data-project='hangdog'] {
+  background: var(--secondary2-lighter);
+}
+
+.project-video {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  object-fit: contain;
+  top: 0;
+  left: 0;
+  background: var(--primary-darker); /* default */
+}
+
+.project-video[data-project='greyhound-table'] {
+  background: var(--secondary-lightest);
+}
+
+.project-video[data-project='germany-trivia'] {
+  background: var(--primary-darkest);
+}
+
+.project-video[data-project='shuggapuss'] {
+  background: var(--accent-darker);
+}
+
+.project-video[data-project='hangdog'] {
+  background: var(--secondary-lighter);
+}
+
+.video-toggle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.video-toggle:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.tab-content {
   display: none;
+}
+
+.tab-content.active {
+  display: block;
 }
 
 @media screen and (min-width: 475px) {
   section {
-    margin: 3rem auto;
+    padding: 0 3rem;
   }
 }
-/* katy CHANGE TO FLEX ROW  */
+/*  CHANGE TO FLEX ROW  */
 @media screen and (min-width: 820px) {
   header {
     padding: 1rem 4.2rem;
@@ -334,20 +458,19 @@ header {
 
   .split-screen-hero {
     flex-direction: row;
-    gap: 60px;
+    gap: 20px;
   }
   .profile-image-coin {
     margin: 0 auto;
-    height: 400px;
-    width: 400px;
+    height: 250px;
+    width: 250px;
   }
   .details {
     gap: 30px;
-    padding-right: 60px;
     width: 60%;
   }
   .details h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .details h1 .title-pipe {
@@ -357,22 +480,67 @@ header {
     display: none;
   }
 
+  .social-icons a svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .project-grid {
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+
   /* PROJECT CARDS  */
   .project-card {
     flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 5px 10px -3px var(--secondary-darkest);
   }
 
   .project-card:nth-of-type(odd) {
     flex-direction: row-reverse;
   }
 
+  .project-details {
+    text-align: left;
+    flex: 1;
+  }
+
+  .project-card:nth-of-type(odd) .project-details {
+    text-align: right;
+  }
+
+  .video-toggle {
+    display: none;
+  }
+
   .img-container {
-    width: 320px;
+    flex: 0 0 320px;
     height: 320px;
   }
-  .img-container:hover + .project-video-container {
-    display: block;
+
+  .img-container img {
+    object-fit: cover;
+    top: 50px;
+    left: 50px;
   }
+
+  .project-card:nth-child(odd) .project-links {
+    justify-content: flex-end;
+  }
+
+   .project-card:nth-child(even) .project-links {
+    justify-content: flex-start;
+  }
+
+.project-links a:hover,
+.project-links a:focus {
+  color: var(--accent-color);
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in;
+}
 }
 
 @media screen and (min-width: 900px) {
@@ -383,6 +551,15 @@ header {
 }
 
 @media screen and (min-width: 1000px) {
+  .details h1 {
+    text-align: left;
+    font-size: 2.1rem;
+  }
+
+  .details p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
   /* LINKS WITH HOVER EFFECT ONLY ON DESKTOP */
   .social-links {
     display: flex;
@@ -487,16 +664,18 @@ header {
 @media screen and (min-width: 1200px) {
   section {
     margin: 0px auto;
-    width: 100%;
     padding: 0 60px;
-    max-width: 1400px;
+  }
+
+  .profile-image-coin {
+    height: 350px;
+    width: 350px;
   }
 }
 
 @media screen and (min-width: 1500px) {
   section {
     width: 85%;
-    max-width: 1700px;
     margin: 100px auto;
   }
 }

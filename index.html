@@ -183,21 +183,32 @@
     </section>
 
     <a class="section-anchor" id="featured-projects"></a>
+
+    <!-- PROJECTS SECTION  -->
     <section class="featured-projects">
       <h2 class="sr-only">Featured Projects</h2>
       <div class="project-grid">
+        <!-- FIRST PROJECT  -->
         <div class="project-card">
-          <div class="img-container">
+          <div data-project="greyhound-table" class="img-container">
             <img
               src="/images/dog-data-acc.png"
               alt="table of dog data with one row opened to show details of one dog"
             />
-          </div>
-          <!-- <div class="project-video-container">
-            <video muted autoplay loop playsinline>
-              <source src="/images/dog-data.mp4" type="video/mp4">
+            <video
+              data-project="greyhound-table"
+              class="project-video"
+              muted
+              autoplay
+              loop
+              playsinline
+            >
+              <source src="/images/dog-data.mp4" type="video/mp4" />
             </video>
-          </div> -->
+            <button class="video-toggle" aria-label="Play demo button">
+              ► Demo
+            </button>
+          </div>
           <div class="project-details">
             <h3 class="project-title">Greyhound Data Table</h3>
             <p class="project-description">
@@ -205,45 +216,49 @@
               an accordion or trigger a modal with filtering and sorting
               functionality.
             </p>
-            <ul>
-              <li>HTML / CSS</li>
-              <li>React</li>
-              <li>Vite</li>
+            <ul class="skills-list">
+              <li class="skill-item">HTML / CSS</li>
+              <li class="skill-item">React</li>
+              <li class="skill-item">Vite</li>
             </ul>
             <div class="project-links">
               <a
                 href="https://www.ihatetoast.com/available-hound-data-table/"
                 target="_blank"
                 rel="noreferrer"
-                aria-role="button"
                 class="btn btn-primary"
                 >Live Site</a
               >
-
               <a
                 href="https://github.com/ihatetoast/available-hound-data-table"
                 target="_blank"
                 rel="noreferrer"
-                aria-role="button"
                 class="btn btn-secondary"
                 >View Code</a
               >
             </div>
           </div>
         </div>
-
+        <!-- SECOND PROJECT  -->
         <div class="project-card">
-          <div class="img-container">
+          <div class="img-container" data-project="germany-trivia">
             <img
               src="/images/ger-trivia.png"
               alt="result of quiz showing bar graph and map of Germany"
             />
-          </div>
-          <!-- <div class="project-video-container">
-            <video muted autoplay loop playsinline>
-              <source src="/images/german-trivia-app.mp4" type="video/mp4">
+            <video
+              class="project-video"
+              data-project="germany-trivia"
+              muted
+              autoplay
+              loop
+              playsinline
+            >
+              <source src="/images/german-trivia-app.mp4" type="video/mp4" />
             </video>
-          </div> -->
+            <button class="video-toggle" aria-label="Play demo button"></button>
+          </div>
+
           <div class="project-details">
             <h3 class="project-title">German Trivia App</h3>
             <p class="project-description">
@@ -251,103 +266,112 @@
               knowledge on. A custom Bierstein timer shows how much time is
               left. Results displayed as a flag bar graph.
             </p>
-            <ul>
-              <li>HTML / CSS</li>
-              <li>React</li>
-              <li>Vite</li>
+            <ul class="skills-list">
+              <li class="skill-item">HTML / CSS</li>
+              <li class="skill-item">React</li>
+              <li class="skill-item">Vite</li>
             </ul>
             <div class="project-links">
               <a
                 href="https://www.ihatetoast.com/germany-trivia-quiz/"
                 target="_blank"
                 rel="noreferrer"
-                aria-role="button"
                 class="btn btn-primary"
                 >Live Site</a
               >
-
               <a
                 href="https://github.com/ihatetoast/germany-trivia-quiz"
                 target="_blank"
                 rel="noreferrer"
-                aria-role="button"
                 class="btn btn-secondary"
                 >View Code</a
               >
             </div>
           </div>
         </div>
-
+        <!-- THIRD PROJECT  -->
         <div class="project-card">
-          <div class="img-container">
-            <img src="/images/shuggapus.png" alt="pictures of cats" />
-          </div>
-          <!-- <div class="project-video-container">
-            <video muted autoplay loop playsinline>
-              <source src="/images/shuggapus.mp4" type="video/mp4">
+          <div class="img-container" data-project="shuggapuss">
+            <img src="/images/shuggapuss.png" alt="pictures of cats" />
+            <video
+              class="project-video"
+              data-project="shuggapuss"
+              muted
+              autoplay
+              loop
+              playsinline
+            >
+              <source src="/images/shuggapuss.mp4" type="video/mp4" />
             </video>
-          </div> -->
+          </div>
+          <button class="video-toggle" aria-label="Play demo button"></button>
           <div class="project-details">
             <h3 class="project-title">Meowr-Shuggapuss</h3>
             <p class="project-description">
               Cat dating app to hiss or pspsps to favourite and review
               favourited cats using the Cat API, Material UI, and Local Storage.
             </p>
-            <ul>
-              <li>React</li>
-              <li>TypeScript</li>
-              <li>CSS</li>
+            <ul class="skills-list">
+              <li class="skill-item">React</li>
+              <li class="skill-item">TypeScript</li>
+              <li class="skill-item">CSS</li>
             </ul>
             <div class="project-links">
               <a
                 href="http://www.ihatetoast.com/meowr-shuggapuss/"
                 target="_blank"
                 rel="noreferrer"
-                aria-role="button"
                 class="btn btn-primary"
                 >Live Site</a
               >
-
               <a
                 href="https://github.com/ihatetoast/meowr-shuggapuss"
                 target="_blank"
                 rel="noreferrer"
-                aria-role="button"
                 class="btn btn-secondary"
                 >View Code</a
               >
             </div>
           </div>
         </div>
+
+        <!-- FOURTH PROJECT  -->
+
         <div class="project-card">
-          <div class="img-container">
+          <div class="img-container" data-project="hangdog">
             <img
               src="/images/hangdog-game.png"
               alt="hangman game with typewriter keys"
             />
-          </div>
-          <!-- <div class="project-video-container">
-            <video muted autoplay loop playsinline>
-              <source src="/images/hangdog.mp4" type="video/mp4">
+            <video
+              data-project="hangdog"
+              class="project-video"
+              muted
+              autoplay
+              loop
+              playsinline
+            >
+              <source src="/images/hangdog.mp4" type="video/mp4" />
             </video>
-          </div> -->
+            <button class="video-toggle" aria-label="Play demo button">
+              ► Demo
+            </button>
+          </div>
           <div class="project-details">
             <h3 class="project-title">Hangdog</h3>
             <p class="project-description">
               A hangman app that pulls breed data from the Dog API after the
-              game is over.
             </p>
-            <ul>
-              <li>HTML / CSS</li>
-              <li>React</li>
-              <li>Vite</li>
+            <ul class="skills-list">
+              <li class="skill-item">HTML / CSS</li>
+              <li class="skill-item">React</li>
+              <li class="skill-item">Vite</li>
             </ul>
             <div class="project-links">
               <a
                 href="http://www.ihatetoast.com/hangdog/"
                 target="_blank"
                 rel="noreferrer"
-                aria-role="button"
                 class="btn btn-primary"
                 >Live Site</a
               >
@@ -356,7 +380,6 @@
                 href="https://github.com/ihatetoast/hangdog"
                 target="_blank"
                 rel="noreferrer"
-                aria-role="button"
                 class="btn btn-secondary"
                 >View Code</a
               >
@@ -368,39 +391,43 @@
     <a class="section-anchor" id="about"></a>
     <section id="about" class="about">
       <h2 class="sr-only">About me</h2>
-      <div class="tab-buttons">
-        <button class="tab-btn active" data-tab="developer">
-          Katy the dev
-        </button>
-        <button class="tab-btn" data-tab="person">Katy the person</button>
-      </div>
+      <div class="tab-container">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="developer">
+            Katy the dev
+          </button>
+          <button class="tab-btn" data-tab="person">
+            Katy the person
+          </button>
+        </div>
 
-      <div class="tab-content active" id="developer">
-        <p>
-          I'm a creative frontend developer who loves building interactive React apps that
-          solve real problems, from teaching German to helping
-          greyhounds find homes. I build with accessibility&mdash;why limit our audience? My 4.5 years working for Meta and Bank of America taught
-          me that clean code, good documentation, and regression testing are your friends.
-        </p>
-        <div class="tech-icons">
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span>JavaScript (ES6+)</span>
-          <span>React</span>
-          <span>Responsive Design</span>
-          <span>Accessibity (a11y)</span>
-          <span>Git & GitHub</span>
-          <span>TailWind</span>
-          <span>TypeScript</span>
-          <span>Vite</span>
+        <div class="tab-content active" id="developer">
+          <p>
+            I'm a creative frontend developer who loves building interactive
+            React apps that solve real problems, from teaching German to helping
+            greyhounds find homes. I build with accessibility&mdash;why limit
+            our audience? My 4.5 years working for Meta and Bank of America
+            taught me that clean code, good documentation, and regression
+            testing are your friends.
+          </p>
+          <div class="tech-icons">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript (ES6+)</span>
+            <span>React</span>
+            <span>Responsive Design</span>
+            <span>Accessibity (a11y)</span>
+            <span>Git & GitHub</span>
+            <span>TailWind</span>
+            <span>TypeScript</span>
+            <span>Vite</span>
+          </div>
         </div>
       </div>
 
       <div class="tab-content" id="person">
         <div>
-          <p>
-            When I am not banging away at the keyboard, I'm 
-          </p>
+          <p>When I am not banging away at the keyboard, I'm</p>
         </div>
         <div></div>
       </div>
