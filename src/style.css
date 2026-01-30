@@ -2,7 +2,7 @@
 :root {
   --white: #f5f8fa;
   --black: #0c0c22;
-
+/* leave colors even if unused. they're possible  */
   --primary-color: #4d2b8c;
   --primary-darker: #391972;
   --primary-darkest: #240957;
