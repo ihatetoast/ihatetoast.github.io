@@ -1,3 +1,9 @@
 export default {
   base: '/',
+  build: {
+    outDir: 'dist',
+    rollupOptions: {
+    }
+  },
+  publicDir: 'public'
 }
