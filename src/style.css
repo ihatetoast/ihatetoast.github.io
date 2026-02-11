@@ -400,6 +400,10 @@ header {
   background: var(--accent-darkest);
 }
 
+.img-container[data-project='ladybug-calculator'] {
+  background: var(--accent-lightest);
+}
+
 .img-container[data-project='shuggapuss'] {
   background: var(--secondary-darkest);
 }
@@ -423,6 +427,10 @@ header {
 
 .project-video[data-project='germany-trivia'] {
   background: var(--primary-darkest);
+}
+
+.project-video[data-project='ladybug-calculator'] {
+  background: var(--primary-lightest);
 }
 
 .project-video[data-project='shuggapuss'] {
