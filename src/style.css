@@ -396,6 +396,10 @@ header {
   background: var(--primary-lightest);
 }
 
+.img-container[data-project='pup-matcher'] {
+  background: var(--secondary2-darker);
+}
+
 .img-container[data-project='germany-trivia'] {
   background: var(--accent-darkest);
 }
@@ -424,6 +428,11 @@ header {
 .project-video[data-project='greyhound-table'] {
   background: var(--secondary-lightest);
 }
+
+.project-video[data-project='pup-matcher'] {
+  background: var(--accent-lightest);
+}
+
 
 .project-video[data-project='germany-trivia'] {
   background: var(--primary-darkest);
